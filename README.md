@@ -1,2 +1,5 @@
 # .vimrc
-My vim configurations. Not a lot to see, but hopefully I'll keep building this properly.
+
+My vim configurations.
+
+It's relatively empty, but I'm still getting comfortable with the tool. Hopefully as time goes on I can customize it a little more and use it efficiently.
