@@ -1,13 +1,31 @@
 " Daniel de Schiffart's vim startup script
 
+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Preloaded settings (or 'That part that I'm not touching yet')  "
+"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
-" Detects XTerm and sets it to 256 colors. Necessary for color schemes.
-" Stays forced until I can fix it for XTerm.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" If XTerm is acting up, add these lines to your ~/.Xdefaults file.
+"
+" *customization: -color
+" XTerm*termName: xterm-256color
+" XTerm*Background: black
+" XTerm*Foreground: white
+
+" Detects XTerm and forces 256 colors. Use only if necessary.
+" This segment was replaced by the lines above.
+"
 "if $TERM == "xterm-256color"
-  set t_Co=256
+"	set t_Co=256
 "endif
+
+" Messing around with 256-color terminal settings got me here. Looks
+" nicer on most color schemes.
+let g:rehash256=1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has("vms")
 	set nobackup		" do not keep a backup file, use versions instead
@@ -37,15 +55,87 @@ else
 	set autoindent
 endif
 
+"- - - - - - - - - - - - -
+" Standard Vim settings  "
+"- - - - - - - - - - - - -
+
+" Set the tab length to four spaces
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+
+" Set display numbers
+set number
+set relativenumber
+
+" Use the external clipboard
+set clipboard=unnamedplus
+
+" Display control characters
+set list
+set listchars=tab:>·,
+
+" Stick indentations to 4-space multiples
+set shiftround
+
+" FIletype-specific indentations
+filetype indent on
+
+" Less redraws
+set lazyredraw
+
+" Set color scheme to Molokai
+colorscheme molokayo
+
+"- - - - - -
+" Keybinds "
+"- - - - - -
+
+" Set leader key
+let mapleader = '§'
+
+" Drag lines up or down
+nnoremap - ddp
+nnoremap _ ddkP
+
+" Change begin and end line characters (trial period)
+nnoremap L $
+nnoremap H 0
+nnoremap $ L
+nnoremap 0 H
+
+" Uppercase the current word
+inoremap <c-u> <esc>bveUea
+
+" Clone the current line downwards
+nnoremap <c-j> yyp
+
+" Open .vimrc NOW
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Surround word by quotes
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+vnoremap <leader><c-"> `><esc>la"<esc>`<i"<esc>lel
+
+" Abbreviation for email
+iabbrev @@ daniel.de.schiffart@gmail.com
+
+" Typos for words I hate
+iabbrev euqation equation
+
+" Escape key alternative
+inoremap jj <esc>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "- - - - - - - - - - - - - - - - - - - - - - - - - -
-" vim-plug setup and plugin loading
-" Get it off https://github.com/junegunn/vim-plug
-" Install any new plugins by running :PlugInstall
+" vim-plug setup and plugin loading                "
+" Get it off https://github.com/junegunn/vim-plug  "
+" Install any new plugins by running :PlugInstall  "
 "- - - - - - - - - - - - - - - - - - - - - - - - - -
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/vim-plug')
@@ -57,31 +147,11 @@ Plug 'vim-airline/vim-airline'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Set the tab length to four spaces
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
-
-" Set display numbers
-set number
-set relativenumber
-
-" Set color scheme to Molokai
-colorscheme molokai
-
-" Use the external clipboard
-set clipboard=unnamedplus
-
-" Display control characters
-set list
-set listchars=tab:>·,
-
-" FIletype-specific indentations
-filetype indent on
-
-" Less redraws
-set lazyredraw
+"- - - - - - - - - -
+" Plugin settings  "
+"- - - - - - - - - -
 
 " YCM autocompletion minimum characters
 "let g:ycm_min_num_of_chars_for_completion = 20
+
+"let g:molokai_original=1
