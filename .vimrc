@@ -7,25 +7,32 @@
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " If XTerm is acting up, add these lines to your ~/.Xdefaults file.
 "
-" *customization: -color
-" XTerm*termName: xterm-256color
-" XTerm*Background: black
-" XTerm*Foreground: white
+"     *customization: -color
+"     XTerm*termName: xterm-256color
+"     XTerm*Background: black
+"     XTerm*Foreground: white
+
+" If XTerm is STILL acting up, add the same lines to your ~/.Xresources file 
+" (create one if necessary) and run the following command in the terminal.
+"
+"     xrdb -merge ~/.Xresources
+" 
+" Replace '-merge' with '-remove' to undo.
 
 " Detects XTerm and forces 256 colors. Use only if necessary.
 " This segment was replaced by the lines above.
 "
-"if $TERM == "xterm-256color"
-"	set t_Co=256
-"endif
+"     if $TERM == "xterm-256color"
+"     	set t_Co=256
+"     endif
 
 " Messing around with 256-color terminal settings got me here. Looks
 " nicer on most color schemes.
 let g:rehash256=1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has("vms")
 	set nobackup		" do not keep a backup file, use versions instead
@@ -37,8 +44,8 @@ else
 endif
 
 if &t_Co > 2 || has("gui_running")
-  " Switch on highlighting the last used search pattern.
-  set hlsearch
+	" Switch on highlighting the last used search pattern.
+	set hlsearch
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -98,21 +105,36 @@ let mapleader = '§'
 nnoremap - ddp
 nnoremap _ ddkP
 
-" Change begin and end line characters (trial period)
+" Change begin and end line characters
 nnoremap L $
 nnoremap H 0
 nnoremap $ L
 nnoremap 0 H
-
-" Uppercase the current word
-inoremap <c-u> <esc>bveUea
+vnoremap L $
+vnoremap H 0
+vnoremap $ L
+vnoremap 0 H
+onoremap L $
+onoremap H 0
+onoremap $ L
+onoremap 0 H
 
 " Clone the current line downwards
 nnoremap <c-j> yyp
 
+" Tab navigation binds
+nnoremap <leader>h :tabprevious<cr>
+nnoremap <leader>l :tabnext<cr>
+nnoremap <leader>k :tabfirst<cr>
+nnoremap <leader>j :tablast<cr>
+
+
 " Open .vimrc NOW
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Uppercase the current word
+inoremap <c-u> <esc>bveUea
 
 " Surround word by quotes
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
@@ -127,7 +149,25 @@ iabbrev euqation equation
 " Escape key alternative
 inoremap jj <esc>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"- - - - - - - - - - - - - - - - - - - -
+" Filetype-specific events and settings
+"- - - - - - - - - - - - - - - - - - - -
+
+autocmd BufNewFile,BufRead *.tex setlocal wrap
+
+autocmd FileType tex nnoremap <buffer> <leader>c I%<esc>
+autocmd FileType lua nnoremap <buffer> <leader>c I--<esc>
+
+autocmd FileType tex iabbrev <buffer> \\\ \textbackslash
+
+"- - - - - - - - - - - -
+" Custom editor commands
+"- - - - - - - - - - - -
+
+command Svimrc split $MYVIMRC
+command Vvimrc vsplit $MYVIMRC
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "- - - - - - - - - - - - - - - - - - - - - - - - - -
 " vim-plug setup and plugin loading                "
 " Get it off https://github.com/junegunn/vim-plug  "
@@ -146,7 +186,8 @@ Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 "- - - - - - - - - -
 " Plugin settings  "
 "- - - - - - - - - -
