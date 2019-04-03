@@ -34,6 +34,21 @@ source $VIMRUNTIME/defaults.vim
 let g:rehash256=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Windows compatibility block
+" Because sometimes you have to do things the hard way
+"
+" Find your .vimrc by running :echo $MYVIMRC
+" Put your .vim folder contents in C:\Users\<username>\vimfiles\
+
+" If you're using gVim
+if has('gui_running')
+	set guifont=Consolas:h9:cANSI:qDRAFT
+	set encoding=utf-8
+	set fileencoding=utf-8
+endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 if has("vms")
 	set nobackup		" do not keep a backup file, use versions instead
 else
@@ -76,7 +91,7 @@ set number
 set relativenumber
 
 " Use the external clipboard
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 " Display control characters
 set list
@@ -91,7 +106,7 @@ filetype indent on
 " Less redraws
 set lazyredraw
 
-" Set color scheme to Molokai
+" Set color scheme to Molokayo
 colorscheme molokayo
 
 "- - - - - -
@@ -99,7 +114,7 @@ colorscheme molokayo
 "- - - - - -
 
 " Set leader key
-let mapleader = '§'
+let mapleader = ','
 
 " Drag lines up or down
 nnoremap - ddp
@@ -128,44 +143,26 @@ nnoremap <leader>l :tabnext<cr>
 nnoremap <leader>k :tabfirst<cr>
 nnoremap <leader>j :tablast<cr>
 
-
 " Open .vimrc NOW
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+
 " Uppercase the current word
 inoremap <c-u> <esc>bveUea
-
-" Surround word by quotes
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-vnoremap <leader><c-"> `><esc>la"<esc>`<i"<esc>lel
 
 " Abbreviation for email
 iabbrev @@ daniel.de.schiffart@gmail.com
 
-" Typos for words I hate
-iabbrev euqation equation
-
 " Escape key alternative
 inoremap jj <esc>
-
-"- - - - - - - - - - - - - - - - - - - -
-" Filetype-specific events and settings
-"- - - - - - - - - - - - - - - - - - - -
-
-autocmd BufNewFile,BufRead *.tex setlocal wrap
-
-autocmd FileType tex nnoremap <buffer> <leader>c I%<esc>
-autocmd FileType lua nnoremap <buffer> <leader>c I--<esc>
-
-autocmd FileType tex iabbrev <buffer> \\\ \textbackslash
 
 "- - - - - - - - - - - -
 " Custom editor commands
 "- - - - - - - - - - - -
 
-command Svimrc split $MYVIMRC
-command Vvimrc vsplit $MYVIMRC
+"command Svimrc split $MYVIMRC
+"command Vvimrc vsplit $MYVIMRC
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "- - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -184,6 +181,9 @@ call plug#begin('~/.vim/vim-plug')
 Plug 'junegunn/vim-plug'
 Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
+"Plug 'tpope/vim-surround'
+"Plug 'SirVer/ultisnips'
+"Plug 'tpope/vim-dispatch'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -195,4 +195,3 @@ call plug#end()
 " YCM autocompletion minimum characters
 "let g:ycm_min_num_of_chars_for_completion = 20
 
-"let g:molokai_original=1
