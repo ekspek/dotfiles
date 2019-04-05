@@ -1,11 +1,14 @@
 " Daniel de Schiffart's vim startup script
 
-"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Preloaded settings (or 'That part that I'm not touching yet')  "
-"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+"- - - - - - - - - - "
+" Preloaded settings "
+"- - - - - - - - - - "
 
-" Get the defaults that most users want.
+" Get the defaults while I don't move them over to this file
 source $VIMRUNTIME/defaults.vim
+
+" Disable compatibility with Vi
+set nocompatible
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " If XTerm is acting up, add these lines to your ~/.Xdefaults file.
@@ -15,7 +18,7 @@ source $VIMRUNTIME/defaults.vim
 "     XTerm*Background: black
 "     XTerm*Foreground: white
 
-" If XTerm is STILL acting up, add the same lines to your ~/.Xresources file 
+" If XTerm is STILL acting up, add the same lines to your ~/.Xresources file
 " (create one if necessary) and run the following command in the terminal.
 "
 "     xrdb -merge ~/.Xresources
@@ -46,9 +49,15 @@ if has('gui_running')
 	set guifont=Consolas:h9:cANSI:qDRAFT
 	set encoding=utf-8
 	set fileencoding=utf-8
+	set hlsearch
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Other compatibility and version checks
+"
+" Most of these came with Vim itself. They're probably worth keeping.
 if has("vms")
 	set nobackup		" do not keep a backup file, use versions instead
 else
@@ -58,7 +67,7 @@ else
 	endif
 endif
 
-if &t_Co > 2 || has("gui_running")
+if &t_Co > 2
 	" Switch on highlighting the last used search pattern.
 	set hlsearch
 endif
@@ -76,10 +85,11 @@ else
 	" always set autoindenting on
 	set autoindent
 endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"- - - - - - - - - - - - -
+"- - - - - - - - - - - - "
 " Standard Vim settings  "
-"- - - - - - - - - - - - -
+"- - - - - - - - - - - - "
 
 " Set the tab length to four spaces
 set tabstop=4
@@ -157,40 +167,45 @@ iabbrev @@ daniel.de.schiffart@gmail.com
 " Escape key alternative
 inoremap jj <esc>
 
-"- - - - - - - - - - - -
-" Custom editor commands
-"- - - - - - - - - - - -
+"- - - - - - - - - - - - "
+" Custom editor commands "
+"- - - - - - - - - - - - "
 
 "command Svimrc split $MYVIMRC
 "command Vvimrc vsplit $MYVIMRC
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"- - - - - - - - - - - - - - - - - - - - - - - - - -
+"- - - - - - - - - - - - - - - - - - - - - - - - - "
 " vim-plug setup and plugin loading                "
 " Get it off https://github.com/junegunn/vim-plug  "
 " Install any new plugins by running :PlugInstall  "
-"- - - - - - - - - - - - - - - - - - - - - - - - - -
+"- - - - - - - - - - - - - - - - - - - - - - - - - "
 if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.vim/vim-plug')
+if has('win32')
+	call plug#begin('~\vimfiles\vim-plug')
+else
+	call plug#begin('~/.vim/vim-plug')
+end
 
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/vim-plug'
-Plug 'lervag/vimtex'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+"Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
-"Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 "Plug 'SirVer/ultisnips'
-"Plug 'tpope/vim-dispatch'
+Plug 'yinflying/matlab.vim'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"- - - - - - - - - -
+"- - - - - - - - - "
 " Plugin settings  "
-"- - - - - - - - - -
+"- - - - - - - - - "
 
 " YCM autocompletion minimum characters
 "let g:ycm_min_num_of_chars_for_completion = 20
