@@ -176,31 +176,10 @@ inoremap jj <esc>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "- - - - - - - - - - - - - - - - - - - - - - - - - "
-" vim-plug setup and plugin loading                "
-" Get it off https://github.com/junegunn/vim-plug  "
-" Install any new plugins by running :PlugInstall  "
+" Plugin loading using pathogen and submodules     "
 "- - - - - - - - - - - - - - - - - - - - - - - - - "
-if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-if has('win32')
-	call plug#begin('~\vimfiles\vim-plug')
-else
-	call plug#begin('~/.vim/vim-plug')
-end
-
-Plug 'junegunn/vim-plug'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-"Plug 'lervag/vimtex'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-surround'
-"Plug 'SirVer/ultisnips'
-Plug 'yinflying/matlab.vim'
-
-call plug#end()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "- - - - - - - - - "
