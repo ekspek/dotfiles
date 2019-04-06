@@ -1,5 +1,27 @@
 " Daniel de Schiffart's vim startup script
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" So first of all, the code to set up Vim and plugins anywhere.            "
+" The Vim configuration files are on GitHub, at ekspek/vimfiles.           "
+" To download these, go to your directory of choice and run                "
+"                                                                          "
+"     git clone --recursive https://github.com/ekspek/vimfiles             "
+"                                                                          "
+" This should get the files. To link them to the files Vim looks for, run  "
+" these linking commands on Linux                                          "
+"                                                                          "
+"     ln -sf vimfiles ~/.vim                                               "
+"     ln -sf vimfiles/.vimrc ~/.vimrc                                      "
+"                                                                          "
+" In GVim on Windows, the folder layout should look a bit like this        "
+"                                                                          "
+"     C:\Users\<username>\vimfiles\                                        "
+"                                                                          "
+" More information can be found at the link below.                         "
+"                                                                          "
+"     https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 "- - - - - - - - - - "
 " Preloaded settings "
 "- - - - - - - - - - "
@@ -36,6 +58,7 @@ set nocompatible
 " nicer on most color schemes.
 let g:rehash256=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Windows compatibility block
@@ -101,7 +124,7 @@ set number
 set relativenumber
 
 " Use the external clipboard
-" set clipboard=unnamedplus
+set clipboard=unnamedplus
 
 " Display control characters
 set list
@@ -116,12 +139,9 @@ filetype indent on
 " Less redraws
 set lazyredraw
 
-" Set color scheme to Molokayo
-colorscheme molokayo
-
-"- - - - - -
-" Keybinds "
-"- - - - - -
+"- - - - - "
+" Mappings "
+"- - - - - "
 
 " Set leader key
 let mapleader = ','
@@ -167,25 +187,19 @@ iabbrev @@ daniel.de.schiffart@gmail.com
 " Escape key alternative
 inoremap jj <esc>
 
-"- - - - - - - - - - - - "
-" Custom editor commands "
-"- - - - - - - - - - - - "
+"- - - - - - - - - - - - - - - - - - - - - - - "
+" Plugin loading using pathogen and submodules "
+"- - - - - - - - - - - - - - - - - - - - - - - "
 
-"command Svimrc split $MYVIMRC
-"command Vvimrc vsplit $MYVIMRC
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"- - - - - - - - - - - - - - - - - - - - - - - - - "
-" Plugin loading using pathogen and submodules     "
-"- - - - - - - - - - - - - - - - - - - - - - - - - "
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
 
-" YCM autocompletion minimum characters
-"let g:ycm_min_num_of_chars_for_completion = 20
+" Set color scheme to Molokayo
+colorscheme molokayo
 
+" Set the airline theme to night_owl
+let g:airline_theme='night_owl'
