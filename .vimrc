@@ -69,7 +69,8 @@ let g:rehash256=1
 
 " If you're using gVim
 if has('gui_running')
-	set guifont=Consolas:h9:cANSI:qDRAFT
+	"set guifont=Consolas:h11:cANSI:qDRAFT
+	set guifont=Space_Mono_for_Powerline:h10:cANSI:qDRAFT
 	set encoding=utf-8
 	set fileencoding=utf-8
 	set hlsearch
@@ -124,7 +125,7 @@ set number
 set relativenumber
 
 " Use the external clipboard
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 " Display control characters
 set list
@@ -198,8 +199,16 @@ execute pathogen#infect()
 " Plugin settings  "
 "- - - - - - - - - "
 
-" Set color scheme to Molokayo
-colorscheme molokayo
+" Set color scheme
+"colorscheme molokayo
+"let g:airline_theme='night_owl'
+set background=light
+colorscheme solarized
+let g:airline_theme='solarized'
 
-" Set the airline theme to night_owl
-let g:airline_theme='night_owl'
+" Undo tree toggle mapping
+nnoremap <F2> :UndotreeToggle<cr>
+
+" Enable powerline fonts
+let g:airline_powerline_fonts=1
+
