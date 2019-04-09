@@ -211,4 +211,3 @@ nnoremap <F2> :UndotreeToggle<cr>
 
 " Enable powerline fonts
 let g:airline_powerline_fonts=1
-
