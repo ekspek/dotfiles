@@ -1,26 +1,7 @@
 " Daniel de Schiffart's vim startup script
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" So first of all, the code to set up Vim and plugins anywhere.            "
-" The Vim configuration files are on GitHub, at ekspek/vimfiles.           "
-" To download these, go to your directory of choice and run                "
-"                                                                          "
-"     git clone --recursive https://github.com/ekspek/vimfiles             "
-"                                                                          "
-" This should get the files. To link them to the files Vim looks for, run  "
-" these linking commands on Linux                                          "
-"                                                                          "
-"     ln -sf vimfiles ~/.vim                                               "
-"     ln -sf vimfiles/.vimrc ~/.vimrc                                      "
-"                                                                          "
-" In GVim on Windows, the folder layout should look a bit like this        "
-"                                                                          "
-"     C:\Users\<username>\vimfiles\                                        "
-"                                                                          "
-" More information can be found at the link below.                         "
-"                                                                          "
-"     https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560 "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim configuration files can be found at github.com/ekspek/vimfiles.
+" Check README.md for extra information.
 
 "- - - - - - - - - - "
 " Preloaded settings "
@@ -178,6 +159,12 @@ nnoremap <leader>j :tablast<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Run the macro saved in register r
+nnoremap <space> @r
+
+" Show stored marks
+nnoremap M :marks<cr>
+
 
 " Uppercase the current word
 inoremap <c-u> <esc>bveUea
@@ -211,3 +198,4 @@ nnoremap <F2> :UndotreeToggle<cr>
 
 " Enable powerline fonts
 let g:airline_powerline_fonts=1
+
