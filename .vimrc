@@ -121,6 +121,11 @@ filetype indent on
 " Less redraws
 set lazyredraw
 
+" Set netrw preferences
+let g:netrw_liststyle = 3
+"let g:netrw_winsize = 20
+nnoremap <F3> :Vexplore<cr>
+
 "- - - - - "
 " Mappings "
 "- - - - - "
