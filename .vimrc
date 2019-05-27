@@ -118,6 +118,10 @@ set shiftround
 " FIletype-specific indentations
 filetype indent on
 
+" Vanilla Vim autocomplete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 " Less redraws
 set lazyredraw
 
