@@ -50,8 +50,8 @@ let g:rehash256=1
 
 " If you're using gVim
 if has('gui_running')
-	"set guifont=Consolas:h11:cANSI:qDRAFT
-	set guifont=Space_Mono_for_Powerline:h10:cANSI:qDRAFT
+	set guifont=Inconsolata_for_Powerline:h11:cANSI:qDRAFT
+	"set guifont=Space_Mono_for_Powerline:h10:cANSI:qDRAFT
 	set encoding=utf-8
 	set fileencoding=utf-8
 	set hlsearch
@@ -118,7 +118,7 @@ set shiftround
 " FIletype-specific indentations
 filetype indent on
 
-" Vanilla Vim autocomplete
+" Vim native autocomplete
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
@@ -129,6 +129,13 @@ set lazyredraw
 let g:netrw_liststyle = 3
 "let g:netrw_winsize = 20
 nnoremap <F3> :Vexplore<cr>
+
+" Reload changed files automatically
+set autoread
+
+" Search case sensitivity options
+set ignorecase
+set smartcase
 
 "- - - - - "
 " Mappings "
@@ -143,16 +150,16 @@ nnoremap _ ddkP
 
 " Change begin and end line characters
 nnoremap L $
-nnoremap H 0
-nnoremap $ L
-nnoremap 0 H
 vnoremap L $
-vnoremap H 0
-vnoremap $ L
-vnoremap 0 H
 onoremap L $
+nnoremap H 0
+vnoremap H 0
 onoremap H 0
+nnoremap $ L
+vnoremap $ L
 onoremap $ L
+nnoremap 0 H
+vnoremap 0 H
 onoremap 0 H
 
 " Clone the current line downwards
@@ -169,20 +176,13 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Run the macro saved in register r
-nnoremap <space> @r
+nnoremap <space> @s
 
 " Show stored marks
 nnoremap M :marks<cr>
 
-
-" Uppercase the current word
-inoremap <c-u> <esc>bveUea
-
-" Abbreviation for email
-iabbrev @@ daniel.de.schiffart@gmail.com
-
 " Escape key alternative
-inoremap jj <esc>
+inoremap jk <esc>
 
 "- - - - - - - - - - - - - - - - - - - - - - - "
 " Plugin loading using pathogen and submodules "
@@ -196,15 +196,14 @@ execute pathogen#infect()
 "- - - - - - - - - "
 
 " Set color scheme
-"colorscheme molokayo
-"let g:airline_theme='night_owl'
-set background=light
-colorscheme solarized
-let g:airline_theme='solarized'
+colorscheme molokai
+let g:airline_theme='night_owl'
+"set background=light
+"colorscheme solarized
+"let g:airline_theme='solarized'
 
 " Undo tree toggle mapping
 nnoremap <F2> :UndotreeToggle<cr>
 
 " Enable powerline fonts
 let g:airline_powerline_fonts=1
-
