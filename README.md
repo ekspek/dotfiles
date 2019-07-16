@@ -25,7 +25,7 @@ with the `.vimrc` placed a directory above.
 
 ### Stuff I use
 
-Plugins are setup with git submodules and [pathogen](https://github.com/tpope/vim-pathogen). Check [this gist](https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560) for information and instructions.
+Plugins are setup with git submodules and Vim's native plugin manager. Check [this gist](https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560) for information and instructions.
 
 Various monospaced fonts compatible with [vim-airline](https://github.com/vim-airline/vim-airline) can be found at [powerline/fonts](https://github.com/powerline/fonts).
 
