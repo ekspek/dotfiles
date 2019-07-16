@@ -1,0 +1,27 @@
+[submodule "pack/ekspek/start/vim-airline"]
+	path = pack/ekspek/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/ekspek/start/vim-dispatch"]
+	path = pack/ekspek/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "pack/ekspek/start/vimtex"]
+	path = pack/ekspek/start/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "pack/ekspek/start/vim-lua"]
+	path = pack/ekspek/start/vim-lua
+	url = https://github.com/tbastos/vim-lua
+[submodule "pack/ekspek/start/undotree"]
+	path = pack/ekspek/start/undotree
+	url = https://github.com/mbbill/undotree
+[submodule "pack/ekspek/start/molokayo"]
+	path = pack/ekspek/start/molokayo
+	url = https://github.com/fmoralesc/molokayo
+[submodule "pack/ekspek/start/molokai"]
+	path = pack/ekspek/start/molokai
+	url = https://github.com/tomasr/molokai
+[submodule "pack/ekspek/start/vim-airline-themes"]
+	path = pack/ekspek/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/ekspek/start/vim-colors-solarized"]
+	path = pack/ekspek/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
