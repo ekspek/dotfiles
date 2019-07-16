@@ -184,26 +184,17 @@ nnoremap M :marks<cr>
 " Escape key alternative
 inoremap jk <esc>
 
-"- - - - - - - - - - - - - - - - - - - - - - - "
-" Plugin loading using pathogen and submodules "
-"- - - - - - - - - - - - - - - - - - - - - - - "
-
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
 
 " Set color scheme
-colorscheme molokai
+colorscheme molokayo
 let g:airline_theme='night_owl'
-"set background=light
-"colorscheme solarized
-"let g:airline_theme='solarized'
 
 " Undo tree toggle mapping
 nnoremap <F2> :UndotreeToggle<cr>
 
 " Enable powerline fonts
 let g:airline_powerline_fonts=1
+

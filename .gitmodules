@@ -1,33 +1,30 @@
-[submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
+[submodule "pack/ekspek/start/vim-airline"]
+	path = pack/ekspek/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
+[submodule "pack/ekspek/start/vim-surround"]
+	path = pack/ekspek/start/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule "bundle/vim-dispatch"]
-	path = bundle/vim-dispatch
+[submodule "pack/ekspek/start/vim-dispatch"]
+	path = pack/ekspek/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
-[submodule "bundle/vimtex"]
-	path = bundle/vimtex
+[submodule "pack/ekspek/start/vimtex"]
+	path = pack/ekspek/start/vimtex
 	url = https://github.com/lervag/vimtex
-[submodule "bundle/vim-lua"]
-	path = bundle/vim-lua
+[submodule "pack/ekspek/start/vim-lua"]
+	path = pack/ekspek/start/vim-lua
 	url = https://github.com/tbastos/vim-lua
-[submodule "bundle/vim-pathogen"]
-	path = bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
-[submodule "bundle/undotree"]
-	path = bundle/undotree
+[submodule "pack/ekspek/start/undotree"]
+	path = pack/ekspek/start/undotree
 	url = https://github.com/mbbill/undotree
-[submodule "bundle/molokayo"]
-	path = bundle/molokayo
+[submodule "pack/ekspek/start/molokayo"]
+	path = pack/ekspek/start/molokayo
 	url = https://github.com/fmoralesc/molokayo/
-[submodule "bundle/molokai"]
-	path = bundle/molokai
+[submodule "pack/ekspek/start/molokai"]
+	path = pack/ekspek/start/molokai
 	url = https://github.com/tomasr/molokai
-[submodule "bundle/vim-airline-themes"]
-	path = bundle/vim-airline-themes
+[submodule "pack/ekspek/start/vim-airline-themes"]
+	path = pack/ekspek/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
+[submodule "pack/ekspek/start/vim-colors-solarized"]
+	path = pack/ekspek/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
