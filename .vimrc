@@ -120,6 +120,7 @@ filetype indent on
 
 " Vim native autocomplete
 filetype plugin on
+syntax on
 set omnifunc=syntaxcomplete#Complete
 
 " Less redraws
@@ -175,11 +176,14 @@ nnoremap <leader>j :tablast<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" Run the macro saved in register r
+" Run the macro saved in register s (space)
 nnoremap <space> @s
 
 " Show stored marks
-nnoremap M :marks<cr>
+nnoremap <leader>m :marks<cr>
+
+" Show registers
+nnoremap <leader>r :reg<cr>
 
 " Escape key alternative
 inoremap jk <esc>
@@ -189,7 +193,6 @@ inoremap jk <esc>
 "- - - - - - - - - "
 
 " Set color scheme
-colorscheme molokayo
 let g:airline_theme='night_owl'
 
 " Undo tree toggle mapping
@@ -198,3 +201,6 @@ nnoremap <F2> :UndotreeToggle<cr>
 " Enable powerline fonts
 let g:airline_powerline_fonts=1
 
+colorscheme molokai
+colorscheme molokayo
+colorscheme molokayo

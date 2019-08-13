@@ -1,0 +1,70 @@
+snippet begin
+	\\begin{${1:env}}
+		${0}
+	\\end{$1}
+
+snippet tikz
+	\\begin{tikzpicture}
+		${0}
+	\\end{tikzpicture}
+
+snippet align
+	\\begin{align}
+		${0}
+	\\end{align}
+
+snippet gather
+	\\begin{gather}
+		${0}
+	\\end{gather}
+
+snippet ffigbox
+	\\begin{figure}
+		\\ffigbox[\FBwidth]{
+			\caption{${0:Placeholder caption.}}
+			\label{fig:${1:placeholder_label}}
+		}{
+			${2}
+		}
+	\\end{figure}
+
+snippet fcapside
+	\\begin{figure}
+		\\fcapside[\FBwidth]{
+			\caption{${0:Placeholder caption.}}
+			\label{fig:${1:placeholder_label}}
+		}{
+			${2}
+		}
+	\\end{figure}
+
+snippet ita italic text
+	\\textit{${1:${VISUAL:text}}}${0}
+snippet bf bold face text
+	\\textbf{${1:${VISUAL:text}}}${0}
+snippet sc small caps text
+	\\textsc{${1:${VISUAL:text}}}${0}
+snippet sf sans serif text
+	\\textsf{${1:${VISUAL:text}}}${0}
+snippet rm roman font text
+	\\textrm{${1:${VISUAL:text}}}${0}
+snippet tt typewriter (monospace) text
+	\\texttt{${1:${VISUAL:text}}}${0}
+
+snippet tabular
+	\\begin{tabular}{${1:c c c}}\\toprule
+		& & \\
+		\\midrule
+		& & \\
+		\\bottomrule
+	\\end{tabular}
+
+snippet plot
+	\\begin{tikzpicture}
+		\\begin{axis}[
+					${0}
+		]
+			\\addplot +[] {};
+		\\end{axis}
+	\\end{tikzpicture}
+

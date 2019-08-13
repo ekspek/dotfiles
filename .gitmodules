@@ -25,3 +25,12 @@
 [submodule "pack/ekspek/start/vim-colors-solarized"]
 	path = pack/ekspek/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "pack/ekspek/start/vim-snipmate"]
+	path = pack/ekspek/start/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate
+[submodule "pack/ekspek/start/tlib_vim"]
+	path = pack/ekspek/start/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+[submodule "pack/ekspek/start/vim-addon-mw-utils"]
+	path = pack/ekspek/start/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils

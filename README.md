@@ -23,6 +23,22 @@ With Windows and GVim, the file layout should look something like this
 
 with the `.vimrc` placed a directory above.
 
+### Vim plugins and submodules
+
+[This gist](https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560) contains all the information. To summarize quickly, a first install should run
+
+    git submodule update --init --recursive
+
+Updating all submodules is done with
+
+    git submodule update --recursive --remote
+
+Installing new submodules is done via
+
+    git submodule add https://github.com/foo/bar pack/plugins/ekspek/bar
+
+where `foo` and `bar` are placholder names, replace them with actual plugin names.
+
 ### Stuff I use
 
 Plugins are setup with git submodules and Vim's native plugin manager. Check [this gist](https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560) for information and instructions.
