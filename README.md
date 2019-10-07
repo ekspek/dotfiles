@@ -1,8 +1,8 @@
-# vimfiles
+# dotfiles
 
-My Vim configurations.
+My dotfiles, comprised mostly of Vim configurations.
 
-It's relatively empty, but I'm still getting comfortable with the tool. Hopefully as time goes on I can customize it a little more and use it efficiently.
+I still have to set everything up properly. Hopefully I get some more time to do that in the future.
 
 ### Setting it up
 
