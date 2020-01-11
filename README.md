@@ -6,6 +6,8 @@ I still have to set everything up properly. Hopefully I get some more time to do
 
 ### Setting it up
 
+For Linux and other Unix systems, use the '''install.sh''' script.
+
 To set the files up on any machine, go to your directory of choice and run
 
     git clone --recursive https://github.com/ekspek/dotfiles
