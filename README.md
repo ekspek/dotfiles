@@ -8,14 +8,14 @@ I still have to set everything up properly. Hopefully I get some more time to do
 
 To set the files up on any machine, go to your directory of choice and run
 
-    git clone --recursive https://github.com/ekspek/vimfiles
+    git clone --recursive https://github.com/ekspek/dotfiles
 
-The `recursive` option downloads all plugins present in this repo.
+The `recursive` option downloads all submodules present in this repo.
 
 To link the local Vim files to the cloned repo in Linux, run
 
-    ln -sf vimfiles ~/.vim
-    ln -sf vimfiles/.vimrc ~/.vimrc
+    ln -sf dotfiles/.vim ~/.vim
+    ln -sf dotfiles/.vimrc ~/.vimrc
 
 With Windows and GVim, the file layout should look something like this
 
@@ -35,7 +35,7 @@ Updating all submodules is done with
 
 Installing new submodules is done via
 
-    git submodule add https://github.com/foo/bar pack/plugins/ekspek/bar
+    git submodule add https://github.com/foo/bar .vim/pack/plugins/ekspek/bar
 
 where `foo` and `bar` are placholder names, replace them with actual plugin names.
 
