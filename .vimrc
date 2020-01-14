@@ -138,6 +138,10 @@ set autoread
 set ignorecase
 set smartcase
 
+" Set Vim default
+set backupdir=~/.vim/tmp//,.
+set directory=~/.vim/tmp//,.
+
 "- - - - - "
 " Mappings "
 "- - - - - "
@@ -204,3 +208,4 @@ let g:airline_powerline_fonts=1
 colorscheme molokai
 colorscheme molokayo
 colorscheme molokayo
+
