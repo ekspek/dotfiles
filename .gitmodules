@@ -34,3 +34,10 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule ".vim/pack/ekspek/start/coc.nvim"]
+	path = .vim/pack/ekspek/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+	branch = release
+[submodule ".vim/pack/ekspek/start/fzf"]
+	path = .vim/pack/ekspek/start/fzf
+	url = https://github.com/junegunn/fzf
