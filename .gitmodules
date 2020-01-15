@@ -31,3 +31,6 @@
 [submodule ".vim/pack/ekspek/start/vim-addon-mw-utils"]
 	path = .vim/pack/ekspek/start/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh

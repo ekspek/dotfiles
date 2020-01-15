@@ -1,32 +1,52 @@
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="jnrowe"
+# Path to the oh-my-zsh installation
+export ZSH=$HOME/.oh-my-zsh
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# Set name of the theme to load
+ZSH_THEME="agnoster"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+# Display red dots whilst waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# Load plugins
+plugins=(git svn)
 
 source $ZSH/oh-my-zsh.sh
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Custom aliases
+# Local aliases should be written in .zshenv
+
+# Add current working directory to PATH
+export PATH=$PATH:.
+
+# Code to run SVN plugin with zsh themes
+prompt_svn() {
+	local rev branch
+	if in_svn; then
+		rev=$(svn_get_rev_nr)
+		branch=$(svn_get_branch_name)
+		if [[ $(svn_dirty_choose_pwd 1 0) -eq 1 ]]; then
+			prompt_segment yellow black
+			echo -n "$rev@$branch"
+			echo -n "±"
+		else
+			prompt_segment green black
+			echo -n "$rev@$branch"
+		fi
+	fi
+}
+build_prompt() {
+	RETVAL=$?
+	prompt_status
+	prompt_context
+	prompt_dir
+	prompt_git
+	prompt_svn
+	prompt_end
+}
+
+# Remove hostname from zsh theme
+prompt_context() {
+	if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+		#prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" # Comment this line to remove username
+	fi
+}
