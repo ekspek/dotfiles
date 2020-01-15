@@ -38,6 +38,9 @@
 	path = .vim/pack/ekspek/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
 	branch = release
-[submodule ".vim/pack/ekspek/start/fzf"]
-	path = .vim/pack/ekspek/start/fzf
-	url = https://github.com/junegunn/fzf
+[submodule ".vim/pack/ekspek/start/ale"]
+	path = .vim/pack/ekspek/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule ".vim/pack/ekspek/start/fzf.vim"]
+	path = .vim/pack/ekspek/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
