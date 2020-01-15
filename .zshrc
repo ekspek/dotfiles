@@ -1,3 +1,6 @@
+# Disable oh-my-zsh custom folder check
+export ZSH_DISABLE_COMPFIX=true
+
 # Path to the oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
@@ -8,7 +11,7 @@ ZSH_THEME="agnoster"
 COMPLETION_WAITING_DOTS="true"
 
 # Load plugins
-plugins=(git svn)
+plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
