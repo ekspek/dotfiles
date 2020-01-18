@@ -38,9 +38,12 @@
 	path = .vim/pack/ekspek/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
 	branch = release
-[submodule ".vim/pack/ekspek/start/ale"]
-	path = .vim/pack/ekspek/start/ale
-	url = https://github.com/dense-analysis/ale
 [submodule ".vim/pack/ekspek/start/fzf.vim"]
 	path = .vim/pack/ekspek/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule ".vim/pack/ekspek/start/SimpylFold"]
+	path = .vim/pack/ekspek/start/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold
+[submodule ".vim/pack/ekspek/start/vim-signature"]
+	path = .vim/pack/ekspek/start/vim-signature
+	url = https://github.com/kshenoy/vim-signature

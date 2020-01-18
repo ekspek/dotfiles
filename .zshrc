@@ -21,6 +21,9 @@ source $ZSH/oh-my-zsh.sh
 # Add current working directory to PATH
 export PATH=$PATH:.
 
+# Set SVN default editor
+export SVN_EDITOR=vim
+
 # Code to run SVN plugin with zsh themes
 prompt_svn() {
 	local rev branch

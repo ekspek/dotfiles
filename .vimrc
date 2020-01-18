@@ -128,8 +128,7 @@ set lazyredraw
 
 " Set netrw preferences
 let g:netrw_liststyle = 3
-"let g:netrw_winsize = 20
-nnoremap <F3> :Vexplore<cr>
+let g:netrw_winsize = 20
 
 " Reload changed files automatically
 set autoread
@@ -141,6 +140,13 @@ set smartcase
 " Set Vim default
 set backupdir=~/.vim/tmp//,.
 set directory=~/.vim/tmp//,.
+
+" Leave folds open on startup
+set foldlevel=99
+
+" Split settings
+set splitbelow
+set splitright
 
 "- - - - - "
 " Mappings "
@@ -192,6 +198,15 @@ nnoremap <leader>r :reg<cr>
 " Escape key alternative
 inoremap jk <esc>
 
+" Map a split of netrw
+nnoremap <F3> :Vexplore<cr>
+
+" Resize splits
+nnoremap <C-Up> :resize -3<cr>
+nnoremap <C-Down> :resize +3<cr>
+nnoremap <C-Left> :vertical resize -3<cr>
+nnoremap <C-Right> :vertical resize +3<cr>
+
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
@@ -203,7 +218,9 @@ let g:airline_theme='night_owl'
 nnoremap <F2> :UndotreeToggle<cr>
 
 " Enable powerline fonts
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 colorscheme molokai
 colorscheme molokayo
