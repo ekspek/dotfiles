@@ -7,12 +7,6 @@
 " Preloaded settings "
 "- - - - - - - - - - "
 
-" Get the defaults while I don't move them over to this file
-source $VIMRUNTIME/defaults.vim
-
-" Disable compatibility with Vi
-set nocompatible
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " If XTerm is acting up, add these lines to your ~/.Xdefaults file.
 "
@@ -207,6 +201,9 @@ nnoremap <C-Down> :resize +3<cr>
 nnoremap <C-Left> :vertical resize -3<cr>
 nnoremap <C-Right> :vertical resize +3<cr>
 
+" ¯\_(ツ)_/¯
+iabbrev shrug ¯\_(ツ)_/¯
+
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
@@ -226,3 +223,5 @@ colorscheme molokai
 colorscheme molokayo
 colorscheme molokayo
 
+" Enable fzf
+set rtp+=~/.fzf

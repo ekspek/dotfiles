@@ -47,3 +47,6 @@
 [submodule ".vim/pack/ekspek/start/vim-signature"]
 	path = .vim/pack/ekspek/start/vim-signature
 	url = https://github.com/kshenoy/vim-signature
+[submodule ".vim/pack/ekspek/start/asyncrun.vim"]
+	path = .vim/pack/ekspek/start/asyncrun.vim
+	url = https://github.com/skywind300/asyncrun.vim
