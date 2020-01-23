@@ -31,7 +31,11 @@
 
 " Messing around with 256-color terminal settings got me here. Looks
 " nicer on most color schemes.
-let g:rehash256=1
+" let g:rehash256=1
+
+" If you got st installed (which is the prefered choice) then just leave
+" this line enabled
+set termguicolors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -209,7 +213,7 @@ iabbrev shrug ¯\_(ツ)_/¯
 "- - - - - - - - - "
 
 " Set color scheme
-let g:airline_theme='night_owl'
+let g:airline_theme='base16'
 
 " Undo tree toggle mapping
 nnoremap <F2> :UndotreeToggle<cr>
@@ -219,9 +223,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 
-colorscheme molokai
-colorscheme molokayo
-colorscheme molokayo
+colorscheme base16-default-dark
 
 " Enable fzf
 set rtp+=~/.fzf
+
+" Use fzf to switch buffers
+nnoremap <leader>b :Buffers<cr>
