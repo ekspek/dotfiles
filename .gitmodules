@@ -56,3 +56,6 @@
 [submodule ".vim/pack/ekspek/start/vim-visualstar"]
 	path = .vim/pack/ekspek/start/vim-visualstar
 	url = https://github.com/thinca/vim-visualstar
+[submodule "powerline"]
+	path = powerline
+	url = https://github.com/powerline/powerline

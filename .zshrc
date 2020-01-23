@@ -1,3 +1,6 @@
+# Set the terminal style to match suckless
+export TERM=st-256color
+
 # Disable oh-my-zsh custom folder check
 export ZSH_DISABLE_COMPFIX=true
 
