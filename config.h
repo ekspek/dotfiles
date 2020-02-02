@@ -1,3 +1,17 @@
+/* Config file for suckless terminal
+ * Make sure you install these libraries first
+ *
+ *     sudo apt-get install tmux
+ *     sudo apt-get install libx11-dev
+ *     sudo apt-get install libfontconfig1-dev
+ *     sudo apt-get install libxft-dev
+ *
+ * Then get suckless terminal and compile it using
+ *
+ *     sudo make clean install
+ *
+ * Make sure this config file is in the compilation folder
+
 /* See LICENSE file for copyright and license details. */
 
 /*

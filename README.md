@@ -1,12 +1,12 @@
 # dotfiles
 
-My dotfiles, comprised mostly of Vim configurations.
+My dotfiles repository. Mostly to get Vim and other things running quickly.
 
-I still have to set everything up properly. Hopefully I get some more time to do that in the future.
+Still very primitive. Don't judge me :)
 
 ### Setting it up
 
-For Linux and other Unix systems, use the `install.sh` script.
+For Linux, use the `install.sh` script.
 
 To set the files up on any machine, go to your directory of choice and run
 
@@ -14,16 +14,7 @@ To set the files up on any machine, go to your directory of choice and run
 
 The `recursive` option downloads all submodules present in this repo.
 
-To link the local Vim files to the cloned repo in Linux, run
-
-    ln -sf dotfiles/.vim ~/.vim
-    ln -sf dotfiles/.vimrc ~/.vimrc
-
-With Windows and GVim, the file layout should look something like this
-
-     C:\Users\<username>\vimfiles\
-
-with the `.vimrc` placed a directory above.
+To link most config files and folders to their corresponding place in this repo, check the `symlinks.sh` file.
 
 ### Vim plugins and submodules
 
@@ -43,8 +34,26 @@ where `foo` and `bar` are placholder names, replace them with actual plugin name
 
 ### Stuff I use
 
-Plugins are setup with git submodules and Vim's native plugin manager. Check [this gist](https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560) for information and instructions.
+Tmux, suckless terminal and zsh combined with oh-my-zsh for terminal emulation.
+
+NeoVim plugins are setup with git submodules and NeoVim's native plugin manager. Check [this gist](https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560) for information and instructions.
 
 Various monospaced fonts compatible with [vim-airline](https://github.com/vim-airline/vim-airline) can be found at [powerline/fonts](https://github.com/powerline/fonts).
 
-Color scheme is [molokayo](https://github.com/fmoralesc/molokayo).
+## Other notes
+
+### Installing Terminus for Powerline font
+
+Get the fonts from [their source](https://github.com/powerline/fonts).
+
+    sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
+    sudo fc-cache -f -v
+    git clone https://github.com/powerline/fonts
+    ./install.sh
+
+### Fixing colors
+
+Suckless terminal might have some troubles with colors at first. Check these links for some help.
+
+    https://github.com/honza/base16-st/issues/3
+    https://askubuntu.com/questions/208345/dircolors-ls-not-being-displayed-correctly-under-ntfs-drive

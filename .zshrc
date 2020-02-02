@@ -8,7 +8,11 @@ export ZSH_DISABLE_COMPFIX=true
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load
-ZSH_THEME="agnoster"
+ZSH_THEME="kolo"
+
+# Set the random candidates (if ZSH_THEME is set to "random")
+# Used as a storage for themes that I like
+#ZSH_THEME_RANDOM_CANDIDATES=( "agnoster" "gnzh" "jnrowe" "nanotech" )
 
 # Display red dots whilst waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -18,14 +22,19 @@ plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# Load base16-shell
+# Load base16-shell (remember to git clone first)
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
+base16_bright
+
 # Custom aliases
 # Local aliases should be written in .zshenv
+alias stt='st -e tmux > /dev/null 2>&1 ; disown > /dev/null 2>&1'
+alias nvf='nvim $(fzf)'
+alias starwars='telnet towel.blinkenlights.nl'
 
 # Add current working directory to PATH
 export PATH=$PATH:.
