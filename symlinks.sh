@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Config files
 ln -sf $PWD/.vimrc ~/.vimrc
@@ -8,5 +8,3 @@ ln -sf $PWD/.gitconfig ~/.gitconfig
 
 # Folders
 ln -sf $PWD/.vim ~/.vim
-ln -sf $PWD/.oh-my-zsh ~/.oh-my-zsh
-

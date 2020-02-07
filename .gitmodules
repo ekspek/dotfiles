@@ -31,9 +31,6 @@
 [submodule ".vim/pack/ekspek/start/vim-addon-mw-utils"]
 	path = .vim/pack/ekspek/start/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh
 [submodule ".vim/pack/ekspek/start/coc.nvim"]
 	path = .vim/pack/ekspek/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
@@ -59,3 +56,9 @@
 [submodule ".vim/pack/ekspek/start/vim-visualstar"]
 	path = .vim/pack/ekspek/start/vim-visualstar
 	url = https://github.com/thinca/vim-visualstar
+[submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule ".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = .oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions

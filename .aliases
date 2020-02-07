@@ -1,0 +1,16 @@
+#!/bin/sh
+# Alias file
+alias nvf='nvim $(fzf)'
+alias starwars='telnet towel.blinkenlights.nl'
+
+# File binds
+alias windoc="cd /mnt/c/Users/schiffart/Documents"
+alias didp="cd /mnt/c/Users/schiffart/Documents/MobaXterm/home/didp"
+alias gui="cd /mnt/c/Users/schiffart/Documents/MobaXterm/home/didp/gui"
+
+# tmux binds
+alias tmux-cmatrix="tmux split-window -h -p 4 \; \
+	send-keys 'cmatrix -a' C-m \;"
+alias tmux-didp="tmux new-window \; \
+	send-keys 'gui' C-m \; \
+	send-keys 'nvim DCApp.py' C-m \;"

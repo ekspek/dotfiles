@@ -7,6 +7,12 @@ export ZSH_DISABLE_COMPFIX=true
 # Path to the oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
+# Get the path for the dotfiles folder
+export DOTFILES=$HOME/dotfiles
+
+# Custom oh-my-zsh folder
+export ZSH_CUSTOM=$DOTFILES/.oh-my-zsh/custom
+
 # Set name of the theme to load
 ZSH_THEME="kolo"
 
@@ -32,8 +38,7 @@ base16_default-dark
 
 # Custom aliases
 # Local aliases should be written in .zshenv
-alias nvf='nvim $(fzf)'
-alias starwars='telnet towel.blinkenlights.nl'
+source $DOTFILES/.aliases
 
 # Add current working directory to PATH
 export PATH=$PATH:.
@@ -73,3 +78,5 @@ prompt_context() {
 		#prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" # Comment this line to remove username
 	fi
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

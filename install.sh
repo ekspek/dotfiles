@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # If 'permission denied' is returned use 'chmod +x install.sh'
 
@@ -13,8 +13,3 @@ cd dotfiles > /dev/null 2>&1
 
 echo "Cloning submodules..."
 git submodule update --init --recursive
-
-# Install custom oh-my-zsh plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-
