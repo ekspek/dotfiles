@@ -53,12 +53,6 @@
 [submodule ".vim/pack/ekspek/start/base16-vim"]
 	path = .vim/pack/ekspek/start/base16-vim
 	url = https://github.com/chriskempson/base16-vim
-[submodule ".vim/pack/ekspek/start/vim-visualstar"]
-	path = .vim/pack/ekspek/start/vim-visualstar
-	url = https://github.com/thinca/vim-visualstar
-[submodule "powerline"]
-	path = powerline
-	url = https://github.com/powerline/powerline
 [submodule ".vim/pack/ekspek/start/vim-polyglot"]
 	path = .vim/pack/ekspek/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
