@@ -2,4 +2,4 @@
 	email = danieldeschiffart@gmail.com
 	name = Daniel de Schiffart
 [core]
-	editor = vim
+	editor = nvim

@@ -1,17 +1,3 @@
-/* Config file for suckless terminal
- * Make sure you install these libraries first
- *
- *     sudo apt-get install tmux
- *     sudo apt-get install libx11-dev
- *     sudo apt-get install libfontconfig1-dev
- *     sudo apt-get install libxft-dev
- *
- * Then get suckless terminal and compile it using
- *
- *     sudo make clean install
- *
- * Make sure this config file is in the compilation folder
-
 /* See LICENSE file for copyright and license details. */
 
 /*
@@ -98,7 +84,7 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 
-/* base16-default-dark-theme obtained from the internet */
+/* Modified version of base16-bright obtained from the internet */
 static const char *colorname[] = {
   "#181818", /* base00 */
   "#ab4642", /* base08 */
@@ -122,7 +108,7 @@ unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
 static unsigned int defaultcs = 13;
 static unsigned int defaultrcs = 0;
-/* base16-default-dark-theme obtained from the internet */
+/* Modified version of base16-bright obtained from the internet */
 
 /*
  * Default shape of cursor
@@ -132,7 +118,7 @@ static unsigned int defaultrcs = 0;
  * 7: Snowman ("☃")
  */
 /* Also changed by me */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers
@@ -152,7 +138,7 @@ static unsigned int mousebg = 0;
  * Color used to display font attributes when fontconfig selected a font which
  * doesn't match the ones requested.
  */
-static unsigned int defaultattr = 11;
+static unsigned int defaultattr = 13;
 
 /*
  * Force mouse select/shortcuts while mask is active (when MODE_MOUSE is set).

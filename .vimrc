@@ -48,7 +48,7 @@ set termguicolors
 
 " If you're using gVim
 if has('gui_running')
-	set guifont=Inconsolata_for_Powerline:h11:cANSI:qDRAFT
+	set guifont=Terminess_Powerline:h12:cANSI:qDRAFT
 	"set guifont=Space_Mono_for_Powerline:h10:cANSI:qDRAFT
 	set encoding=utf-8
 	set fileencoding=utf-8
@@ -104,7 +104,7 @@ set number
 set relativenumber
 
 " Use the external clipboard
-"set clipboard=unnamedplus
+set clipboard=unnamedplus
 
 " Display control characters
 set list
@@ -135,7 +135,7 @@ set autoread
 set ignorecase
 set smartcase
 
-" Set Vim default
+" Set Vim backup file locations
 set backupdir=~/.vim/tmp//,.
 set directory=~/.vim/tmp//,.
 
@@ -175,10 +175,10 @@ onoremap 0 H
 nnoremap <c-j> yyp
 
 " Tab navigation binds
-nnoremap <leader>h :tabprevious<cr>
-nnoremap <leader>l :tabnext<cr>
-nnoremap <leader>k :tabfirst<cr>
-nnoremap <leader>j :tablast<cr>
+nnoremap <leader>h :bprevious<cr>
+nnoremap <leader>l :bnext<cr>
+nnoremap <leader>k :bfirst<cr>
+nnoremap <leader>j :blast<cr>
 
 " Open .vimrc NOW
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>

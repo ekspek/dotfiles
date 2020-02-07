@@ -28,11 +28,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-base16_bright
+base16_default-dark
 
 # Custom aliases
 # Local aliases should be written in .zshenv
-alias stt='st -e tmux > /dev/null 2>&1 ; disown > /dev/null 2>&1'
 alias nvf='nvim $(fzf)'
 alias starwars='telnet towel.blinkenlights.nl'
 
@@ -40,7 +39,7 @@ alias starwars='telnet towel.blinkenlights.nl'
 export PATH=$PATH:.
 
 # Set SVN default editor
-export SVN_EDITOR=vim
+export SVN_EDITOR=nvim
 
 # Code to run SVN plugin with zsh themes
 prompt_svn() {
