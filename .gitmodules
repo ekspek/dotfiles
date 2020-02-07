@@ -56,3 +56,6 @@
 [submodule ".vim/pack/ekspek/start/vim-polyglot"]
 	path = .vim/pack/ekspek/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/pack/ekspek/start/vim-visualstar"]
+	path = .vim/pack/ekspek/start/vim-visualstar
+	url = https://github.com/thinca/vim-visualstar
