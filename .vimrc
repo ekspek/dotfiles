@@ -212,6 +212,47 @@ iabbrev shrug ¯\_(ツ)_/¯
 " Plugin settings  "
 "- - - - - - - - - "
 
+""""""""""""""""""""""""""""""""""
+" dein.vim code block
+if &compatible
+	set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.cache/dein')
+	call dein#begin('~/.cache/dein')
+
+	call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+	call dein#add('vim-airline/vim-airline')
+	call dein#add('lervag/vimtex')
+	call dein#add('tbastos/vim-lua')
+	call dein#add('mbbill/undotree')
+	call dein#add('vim-airline/vim-airline-themes')
+	call dein#add('garbas/vim-snipmate')
+	call dein#add('neoclide/coc.nvim', {'rev': 'release'})
+	call dein#add('tomtom/tlib_vim')
+	call dein#add('MarcWeber/vim-addon-mw-utils')
+	call dein#add('junegunn/fzf.vim')
+	call dein#add('tmhedberg/SimpylFold')
+	call dein#add('kshenoy/vim-signature')
+	call dein#add('skywind3000/asyncrun.vim')
+	call dein#add('chriskempson/base16-vim')
+	call dein#add('sheerun/vim-polyglot')
+	call dein#add('thinca/vim-visualstar')
+	call dein#add('zsh-users/zsh-syntax-highlighting')
+	call dein#add('zsh-users/zsh-autosuggestions')
+	call dein#add('preservim/nerdcommenter')
+
+	call dein#end()
+	call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+""""""""""""""""""""""""""""""""""
+
 " Set color scheme
 let g:airline_theme='base16'
 

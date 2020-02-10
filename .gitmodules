@@ -1,67 +1,6 @@
-[submodule ".vim/pack/ekspek/start/molokayo"]
-	path = .vim/pack/ekspek/start/molokayo
-	url = https://github.com/fmoralesc/molokayo
-[submodule ".vim/pack/ekspek/start/vim-airline"]
-	path = .vim/pack/ekspek/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule ".vim/pack/ekspek/start/molokai"]
-	path = .vim/pack/ekspek/start/molokai
-	url = https://github.com/tomasr/molokai
-[submodule ".vim/pack/ekspek/start/vim-dispatch"]
-	path = .vim/pack/ekspek/start/vim-dispatch
-	url = https://github.com/tpope/vim-dispatch
-[submodule ".vim/pack/ekspek/start/vimtex"]
-	path = .vim/pack/ekspek/start/vimtex
-	url = https://github.com/lervag/vimtex
-[submodule ".vim/pack/ekspek/start/vim-lua"]
-	path = .vim/pack/ekspek/start/vim-lua
-	url = https://github.com/tbastos/vim-lua
-[submodule ".vim/pack/ekspek/start/undotree"]
-	path = .vim/pack/ekspek/start/undotree
-	url = https://github.com/mbbill/undotree
-[submodule ".vim/pack/ekspek/start/vim-airline-themes"]
-	path = .vim/pack/ekspek/start/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
-[submodule ".vim/pack/ekspek/start/vim-snipmate"]
-	path = .vim/pack/ekspek/start/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate
-[submodule ".vim/pack/ekspek/start/tlib_vim"]
-	path = .vim/pack/ekspek/start/tlib_vim
-	url = https://github.com/tomtom/tlib_vim
-[submodule ".vim/pack/ekspek/start/vim-addon-mw-utils"]
-	path = .vim/pack/ekspek/start/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils
-[submodule ".vim/pack/ekspek/start/coc.nvim"]
-	path = .vim/pack/ekspek/start/coc.nvim
-	url = https://github.com/neoclide/coc.nvim
-	branch = release
-[submodule ".vim/pack/ekspek/start/fzf.vim"]
-	path = .vim/pack/ekspek/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
-[submodule ".vim/pack/ekspek/start/SimpylFold"]
-	path = .vim/pack/ekspek/start/SimpylFold
-	url = https://github.com/tmhedberg/SimpylFold
-[submodule ".vim/pack/ekspek/start/vim-signature"]
-	path = .vim/pack/ekspek/start/vim-signature
-	url = https://github.com/kshenoy/vim-signature
-[submodule ".vim/pack/ekspek/start/asyncrun.vim"]
-	path = .vim/pack/ekspek/start/asyncrun.vim
-	url = https://github.com/skywind3000/asyncrun.vim
-[submodule ".vim/pack/ekspek/start/base16-vim"]
-	path = .vim/pack/ekspek/start/base16-vim
-	url = https://github.com/chriskempson/base16-vim
-[submodule ".vim/pack/ekspek/start/vim-polyglot"]
-	path = .vim/pack/ekspek/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot
-[submodule ".vim/pack/ekspek/start/vim-visualstar"]
-	path = .vim/pack/ekspek/start/vim-visualstar
-	url = https://github.com/thinca/vim-visualstar
 [submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule ".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = .oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule ".vim/pack/ekspek/start/nerdcommenter"]
-	path = .vim/pack/ekspek/start/nerdcommenter
-	url = https://github.com/preservim/nerdcommenter
