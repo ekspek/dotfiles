@@ -38,7 +38,7 @@ base16_default-dark
 
 # Custom aliases
 # Local aliases should be written in .zshenv
-source $DOTFILES/.aliases
+source ~/.aliases
 
 # Add current working directory to PATH
 export PATH=$PATH:.

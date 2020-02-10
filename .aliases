@@ -1,12 +1,19 @@
-#!/bin/sh
+#!/bin/zsh
 # Alias file
 alias nvf='nvim $(fzf)'
 alias starwars='telnet towel.blinkenlights.nl'
 
+# File macros
+export DOTFILES=$HOME/dotfiles
+export WINDOC=/mnt/c/Users/schiffart/Documents
+export DIDP=/mnt/c/Users/schiffart/Documents/MobaXterm/home/didp
+export GUI=/mnt/c/Users/schiffart/Documents/MobaXterm/home/didp/gui
+
 # File binds
-alias windoc="cd /mnt/c/Users/schiffart/Documents"
-alias didp="cd /mnt/c/Users/schiffart/Documents/MobaXterm/home/didp"
-alias gui="cd /mnt/c/Users/schiffart/Documents/MobaXterm/home/didp/gui"
+alias dotfiles="cd $DOTFILES"
+alias windoc="cd $WINDOC"
+alias didp="cd $DIDP"
+alias gui="cd $GUI"
 
 # tmux binds
 alias tmux-cmatrix="tmux split-window -h -p 4 \; \
