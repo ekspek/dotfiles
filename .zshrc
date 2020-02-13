@@ -1,5 +1,6 @@
 # Set the terminal style to match suckless
-export TERM=st-256color
+#export TERM=st-256color
+export TERM=tmux-256color
 
 # Disable oh-my-zsh custom folder check
 export ZSH_DISABLE_COMPFIX=true
@@ -36,12 +37,17 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 base16_default-dark
 
+
+
 # Custom aliases
 # Local aliases should be written in .zshenv
 source ~/.aliases
 
 # Add current working directory to PATH
 export PATH=$PATH:.
+
+# Set default editor
+export EDITOR=nvim
 
 # Set SVN default editor
 export SVN_EDITOR=nvim

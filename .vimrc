@@ -25,7 +25,7 @@
 " Detects XTerm and forces 256 colors. Use only if necessary.
 " This segment was replaced by the lines above.
 "
-"     if $TERM == "xterm-256color"
+"     if $TERM == 'xterm-256color'
 "     	set t_Co=256
 "     endif
 
@@ -107,7 +107,7 @@ set relativenumber
 set clipboard=unnamedplus
 
 " Display control characters
-set list
+set nolist " (disabled)
 set listchars=tab:>·,
 
 " Stick indentations to 4-space multiples
@@ -119,7 +119,7 @@ filetype indent on
 " Vim native autocomplete
 filetype plugin on
 syntax on
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 
 " Less redraws
 set lazyredraw
@@ -174,7 +174,7 @@ onoremap 0 H
 " Clone the current line downwards
 nnoremap <c-j> yyp
 
-" Tab navigation binds
+" Buffer navigation mappings
 nnoremap <leader>h :bprevious<cr>
 nnoremap <leader>l :bnext<cr>
 nnoremap <leader>k :bfirst<cr>
@@ -208,6 +208,9 @@ nnoremap <C-Right> :vertical resize +3<cr>
 " ¯\_(ツ)_/¯
 iabbrev shrug ¯\_(ツ)_/¯
 
+" Same file, multiple windows, locked scrolling
+nnoremap <leader>& :set noscb<cr>:vsp<cr><c-w>l<c-f>:set scb<cr><c-w>h:set scb<cr>
+
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
@@ -225,25 +228,26 @@ if dein#load_state('~/.cache/dein')
 
 	call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
+	call dein#add('junegunn/fzf.vim')
 	call dein#add('vim-airline/vim-airline')
 	call dein#add('lervag/vimtex')
 	call dein#add('tbastos/vim-lua')
 	call dein#add('mbbill/undotree')
 	call dein#add('vim-airline/vim-airline-themes')
 	call dein#add('garbas/vim-snipmate')
-	call dein#add('neoclide/coc.nvim', {'rev': 'release'})
+	"call dein#add('neoclide/coc.nvim', {'rev': 'release'})
 	call dein#add('tomtom/tlib_vim')
 	call dein#add('MarcWeber/vim-addon-mw-utils')
-	call dein#add('junegunn/fzf.vim')
 	call dein#add('tmhedberg/SimpylFold')
+	call dein#add('davidhalter/jedi-vim')
 	call dein#add('kshenoy/vim-signature')
 	call dein#add('skywind3000/asyncrun.vim')
 	call dein#add('chriskempson/base16-vim')
 	call dein#add('sheerun/vim-polyglot')
 	call dein#add('thinca/vim-visualstar')
-	call dein#add('zsh-users/zsh-syntax-highlighting')
-	call dein#add('zsh-users/zsh-autosuggestions')
 	call dein#add('preservim/nerdcommenter')
+	call dein#add('Yggdroot/indentLine')
+	call dein#add('junegunn/vim-easy-align')
 
 	call dein#end()
 	call dein#save_state()
@@ -254,6 +258,7 @@ syntax enable
 """"""""""""""""""""""""""""""""""
 
 " Set color scheme
+colorscheme base16-default-dark
 let g:airline_theme='base16'
 
 " Undo tree toggle mapping
@@ -261,13 +266,16 @@ nnoremap <F2> :UndotreeToggle<cr>
 
 " Enable powerline fonts
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#coc#enabled = 1
+"let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
-
-colorscheme base16-default-dark
 
 " Enable fzf
 set rtp+=~/.fzf
 
 " Use fzf to switch buffers
 nnoremap <leader>b :Buffers<cr>
+
+let g:indentLine_enabled = 0
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)

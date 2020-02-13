@@ -3,6 +3,9 @@
 alias nvf='nvim $(fzf)'
 alias starwars='telnet towel.blinkenlights.nl'
 
+# Make ranger exit on its currently selected directory
+alias ranger='. ranger'
+
 # File macros
 export DOTFILES=$HOME/dotfiles
 export WINDOC=/mnt/c/Users/schiffart/Documents
