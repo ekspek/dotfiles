@@ -1,3 +1,6 @@
+############################################################################
+### From here lies code directly related to the terminal and zsh
+############################################################################
 # Set the terminal style to match suckless
 #export TERM=st-256color
 export TERM=tmux-256color
@@ -38,9 +41,15 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 base16_default-dark
 
 
+############################################################################
+### From here lies custom code not directly involved with the terminal
+############################################################################
 # Custom aliases
 # Local aliases should be written in .zshenv
 source ~/.aliases
+
+# Add dotfiles bin folder for user scripts (symlinked to home folder)
+export PATH="$HOME/bin:$PATH"
 
 # Add current working directory to PATH
 export PATH=$PATH:.
@@ -51,6 +60,13 @@ export EDITOR=nvim
 # Set SVN default editor
 export SVN_EDITOR=nvim
 
+# Git commit sign fix
+export GPG_TTY=$(tty)
+
+
+############################################################################
+### From here lies code that was specified to run last by their writers
+############################################################################
 # Code to run SVN plugin with zsh themes
 prompt_svn() {
 	local rev branch

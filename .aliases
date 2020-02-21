@@ -6,24 +6,6 @@ alias starwars='telnet towel.blinkenlights.nl'
 # Make ranger exit on its currently selected directory
 alias ranger='. ranger'
 
-# File macros
-export DOTFILES=$HOME/dotfiles
-export WINDOC=/mnt/c/Users/schiffart/Documents
-export DIDP=$HOME/didp/didp_svn
-export GUI=$DIDP/gui
-export SRC=$DIDP/src
-
-# File binds
-alias dotfiles="cd $DOTFILES"
-alias windoc="cd $WINDOC"
-alias didp="cd $DIDP"
-alias gui="cd $GUI"
-
 # tmux binds
 alias tmux-cmatrix="tmux split-window -h -p 4 \; \
 	send-keys 'cmatrix -a' C-m \;"
-alias tmux-didp="tmux new-window \; \
-	send-keys 'gui' C-m \; \
-	send-keys 'nvim DCApp.py' C-m \;"
-
-alias opendcapp="nvim $DIDP/gui/DCApp.py $DIDP/gui/DCApp/classes.py $DIDP/gui/DCApp/netif.py $DIDP/gui/DCApp/widgets.py"

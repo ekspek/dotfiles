@@ -9,3 +9,4 @@ ln -sf $PWD/.aliases ~/.aliases
 
 # Folders
 ln -sf $PWD/.vim ~/.vim
+ln -sf $PWD/bin ~/bin
