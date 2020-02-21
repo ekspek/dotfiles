@@ -15,11 +15,11 @@ export DOTFILES=$HOME/dotfiles
 export ZSH_CUSTOM=$DOTFILES/.oh-my-zsh/custom
 
 # Set name of the theme to load
-ZSH_THEME="kolo"
+ZSH_THEME="agnoster"
 
 # Set the random candidates (if ZSH_THEME is set to "random")
 # Used as a storage for themes that I like
-#ZSH_THEME_RANDOM_CANDIDATES=( "agnoster" "gnzh" "jnrowe" "nanotech" )
+#ZSH_THEME_RANDOM_CANDIDATES=( "agnoster" "gnzh" "jnrowe" "nanotech" "kolo" )
 
 # Display red dots whilst waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -36,7 +36,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 base16_default-dark
-
 
 
 # Custom aliases

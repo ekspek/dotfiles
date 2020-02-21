@@ -211,6 +211,41 @@ iabbrev shrug ¯\_(ツ)_/¯
 " Same file, multiple windows, locked scrolling
 nnoremap <leader>& :set noscb<cr>:vsp<cr><c-w>l<c-f>:set scb<cr><c-w>h:set scb<cr>
 
+" Toggle 76-char column line
+nnoremap <leader>% :call ColorColumnToggle()<cr>
+
+function! ColorColumnToggle()
+	if &colorcolumn
+		setlocal colorcolumn=0
+	else
+		setlocal colorcolumn=76
+	endif
+endfunction
+
+" Toggle fold column
+nnoremap <leader>f :call FoldColumnToggle()<cr>
+
+function! FoldColumnToggle()
+	if &foldcolumn
+		setlocal foldcolumn=0
+	else
+		setlocal foldcolumn=4
+	endif
+endfunction
+
+" Toggle cursor line and column
+nnoremap <leader>w :call CursorWhereToggle()<cr>
+
+function! CursorWhereToggle()
+	if &cursorline
+		setlocal nocursorline
+		setlocal nocursorcolumn
+	else
+		setlocal cursorline
+		setlocal cursorcolumn
+	endif
+endfunction
+
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
@@ -257,6 +292,10 @@ filetype plugin indent on
 syntax enable
 """"""""""""""""""""""""""""""""""
 
+" Default tex filetype
+let g:tex_flavor='latex'
+let g:polyglot_disabled = ['latex']
+
 " Set color scheme
 colorscheme base16-default-dark
 let g:airline_theme='base16'
@@ -268,6 +307,7 @@ nnoremap <F2> :UndotreeToggle<cr>
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 " Enable fzf
 set rtp+=~/.fzf

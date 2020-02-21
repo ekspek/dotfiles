@@ -9,8 +9,9 @@ alias ranger='. ranger'
 # File macros
 export DOTFILES=$HOME/dotfiles
 export WINDOC=/mnt/c/Users/schiffart/Documents
-export DIDP=/mnt/c/Users/schiffart/Documents/MobaXterm/home/didp
-export GUI=/mnt/c/Users/schiffart/Documents/MobaXterm/home/didp/gui
+export DIDP=$HOME/didp/didp_svn
+export GUI=$DIDP/gui
+export SRC=$DIDP/src
 
 # File binds
 alias dotfiles="cd $DOTFILES"
@@ -24,3 +25,5 @@ alias tmux-cmatrix="tmux split-window -h -p 4 \; \
 alias tmux-didp="tmux new-window \; \
 	send-keys 'gui' C-m \; \
 	send-keys 'nvim DCApp.py' C-m \;"
+
+alias opendcapp="nvim $DIDP/gui/DCApp.py $DIDP/gui/DCApp/classes.py $DIDP/gui/DCApp/netif.py $DIDP/gui/DCApp/widgets.py"
