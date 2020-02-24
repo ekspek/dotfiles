@@ -23,3 +23,6 @@ chmod +x ./installer.sh
 ./installer.sh ~/.cache/dein
 cd ..
 rm -r dein
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

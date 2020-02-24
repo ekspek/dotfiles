@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: .tmux.conf
+    ~/.vimrc: .vimrc
+    ~/.zshrc: .zshrc
+    ~/.gitconfig: .gitconfig
+    ~/.aliases: .aliases
+    ~/.vim: .vim
+    ~/bin: bin
+
+- create:
+    - ~/.config/nvim
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [nvim -c 'call dein#install() | q', Installing submodules]
