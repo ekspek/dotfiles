@@ -19,5 +19,6 @@ tags
 # Persistent undo
 [._]*.un~
 
-# Vim spell folder
+# Vim folders
 .vim/spell
+.vim/tmp

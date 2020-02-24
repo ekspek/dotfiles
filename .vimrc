@@ -108,7 +108,8 @@ set clipboard=unnamedplus
 
 " Display control characters
 set nolist " (disabled)
-set listchars=tab:>·,
+"set listchars=tab:>·,
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 " Stick indentations to 4-space multiples
 set shiftround
@@ -212,8 +213,6 @@ iabbrev shrug ¯\_(ツ)_/¯
 nnoremap <leader>& :set noscb<cr>:vsp<cr><c-w>l<c-f>:set scb<cr><c-w>h:set scb<cr>
 
 " Toggle 76-char column line
-nnoremap <leader>% :call ColorColumnToggle()<cr>
-
 function! ColorColumnToggle()
 	if &colorcolumn
 		setlocal colorcolumn=0
@@ -223,8 +222,6 @@ function! ColorColumnToggle()
 endfunction
 
 " Toggle fold column
-nnoremap <leader>f :call FoldColumnToggle()<cr>
-
 function! FoldColumnToggle()
 	if &foldcolumn
 		setlocal foldcolumn=0
@@ -234,8 +231,6 @@ function! FoldColumnToggle()
 endfunction
 
 " Toggle cursor line and column
-nnoremap <leader>w :call CursorWhereToggle()<cr>
-
 function! CursorWhereToggle()
 	if &cursorline
 		setlocal nocursorline
@@ -245,6 +240,30 @@ function! CursorWhereToggle()
 		setlocal cursorcolumn
 	endif
 endfunction
+
+" Toggle showing hidden characters
+function! HiddenCharToggle()
+	if &list
+		setlocal nolist
+	else
+		setlocal list
+	endif
+endfunction
+
+" Toggle wrapping
+function! WrapToggle()
+	if &wrap
+		setlocal nowrap
+	else
+		setlocal wrap
+	endif
+endfunction
+
+nnoremap <leader>zz :call HiddenCharToggle()<cr>
+nnoremap <leader>zx :call CursorWhereToggle()<cr>
+nnoremap <leader>zc :call ColorColumnToggle()<cr>
+nnoremap <leader>zf :call FoldColumnToggle()<cr>
+nnoremap <leader>zw :call WrapToggle()<cr>
 
 "- - - - - - - - - "
 " Plugin settings  "
@@ -308,14 +327,16 @@ let g:airline_powerline_fonts = 1
 "let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-
 " Enable fzf
 set rtp+=~/.fzf
 
 " Use fzf to switch buffers
 nnoremap <leader>b :Buffers<cr>
 
+
+" Indent lines guides
 let g:indentLine_enabled = 0
+nnoremap <leader>zi :call IndentLinesToggle()<cr>
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
