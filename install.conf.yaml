@@ -6,17 +6,20 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.vim: .vim
+    ~/.config/nvim: .config/nvim
+    ~/.gitconfig: .gitconfig
     ~/.tmux.conf: .tmux.conf
     ~/.vimrc: .vimrc
     ~/.zshrc: .zshrc
-    ~/.gitconfig: .gitconfig
     ~/.aliases: .aliases
-    ~/.vim: .vim
-    ~/bin: bin
 
 - create:
-    - ~/.config/nvim
+    - ~/.cache/dein
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [nvim -c 'call dein#install() | q', Installing submodules]
+  - [apt install neovim]
+  #- [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"]
+  - [sh <(curl -fsSL https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh) ~/.cache/dein]
+  - [nvim -c 'call dein#install() | q']
