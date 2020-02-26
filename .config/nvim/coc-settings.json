@@ -1,3 +1,7 @@
 {
-	"python.jediEnabled": false
+	"suggest.autoTrigger": "trigger",
+	"diagnostic.enable": false,
+	"python.jediEnabled": false,
+	"python.linting.enabled": true,
+	"python.linting.lintOnSave": true
 }

@@ -25,7 +25,7 @@ set relativenumber
 set clipboard=unnamedplus
 
 " Display control characters
-set nolist " (disabled)
+set nolist
 "set listchars=tab:>·,
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
@@ -44,8 +44,8 @@ syntax on
 set lazyredraw
 
 " Set netrw preferences
-let g:netrw_liststyle = 3
-let g:netrw_winsize = 20
+let g:netrw_liststyle=3
+let g:netrw_winsize=20
 
 " Reload changed files automatically
 set autoread

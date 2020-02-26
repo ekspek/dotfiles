@@ -41,7 +41,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <space> @s
 
 " Show stored marks
-nnoremap <leader>m :marks<cr>
+nnoremap <leader>mm :marks<cr>
 
 " Show registers
 nnoremap <leader>r :reg<cr>
@@ -111,8 +111,11 @@ function! WrapToggle()
 	endif
 endfunction
 
-nnoremap <leader>zz :call HiddenCharToggle()<cr>
-nnoremap <leader>zx :call CursorWhereToggle()<cr>
-nnoremap <leader>zc :call ColorColumnToggle()<cr>
-nnoremap <leader>zf :call FoldColumnToggle()<cr>
-nnoremap <leader>zw :call WrapToggle()<cr>
+nnoremap <leader>mz :call HiddenCharToggle()<cr>
+nnoremap <leader>mx :call CursorWhereToggle()<cr>
+nnoremap <leader>mc :call ColorColumnToggle()<cr>
+nnoremap <leader>mf :call FoldColumnToggle()<cr>
+nnoremap <leader>mw :call WrapToggle()<cr>
+
+" Toogle search highlighting
+nnoremap <silent><expr> <leader>mh (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
