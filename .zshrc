@@ -28,7 +28,7 @@ ZSH_THEME="agnoster"
 COMPLETION_WAITING_DOTS="true"
 
 # Load plugins
-plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting thefuck)
 
 source $ZSH/oh-my-zsh.sh
 

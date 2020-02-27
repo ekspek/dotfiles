@@ -33,8 +33,7 @@ nnoremap <leader>k :bfirst<cr>
 nnoremap <leader>j :blast<cr>
 
 " Open .vimrc NOW
-nnoremap <leader>ev :vsplit ~/.vimrc<cr>
-nnoremap <leader>en :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Run the macro saved in register s (space)
