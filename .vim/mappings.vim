@@ -115,6 +115,10 @@ nnoremap <leader>mx :call CursorWhereToggle()<cr>
 nnoremap <leader>mc :call ColorColumnToggle()<cr>
 nnoremap <leader>mf :call FoldColumnToggle()<cr>
 nnoremap <leader>mw :call WrapToggle()<cr>
+nnoremap <leader>mb :bd<cr>
 
 " Toogle search highlighting
 nnoremap <silent><expr> <leader>mh (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+
+" Visual mode search and replace
+vnoremap s ""y:%s/<C-r>"/

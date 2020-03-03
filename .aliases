@@ -3,9 +3,6 @@
 alias nvf='nvim $(fzf)'
 alias starwars='telnet towel.blinkenlights.nl'
 
-# Make ranger exit on its currently selected directory
-alias ranger='. ranger'
-
 # tmux binds
 alias tmux-cmatrix="tmux split-window -h -p 4 \; \
 	send-keys 'cmatrix -a' C-m \;"

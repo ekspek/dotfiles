@@ -84,24 +84,24 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 
-/* Modified version of base16-bright obtained from the internet */
+/* base16-bright obtained from the internet */
 static const char *colorname[] = {
-  "#181818", /* base00 */
-  "#ab4642", /* base08 */
-  "#a1b56c", /* base0B */
-  "#f7ca88", /* base0A */
-  "#7cafc2", /* base0D */
-  "#ba8baf", /* base0E */
-  "#86c1b9", /* base0C */
-  "#d8d8d8", /* base05 */
-  "#585858", /* base03 */
-  "#dc9656", /* base09 */
-  "#282828", /* base01 */
-  "#383838", /* base02 */
-  "#b8b8b8", /* base04 */
-  "#e8e8e8", /* base06 */
-  "#a16946", /* base0F */
-  "#f8f8f8", /* base07 */
+  "#000000", /* base00 */
+  "#fb0120", /* base08 */
+  "#a1c659", /* base0B */
+  "#fda331", /* base0A */
+  "#6fb3d2", /* base0D */
+  "#d381c3", /* base0E */
+  "#76c7b7", /* base0C */
+  "#e0e0e0", /* base05 */
+  "#b0b0b0", /* base03 */
+  "#fc6d24", /* base09 */
+  "#303030", /* base01 */
+  "#505050", /* base02 */
+  "#d0d0d0", /* base04 */
+  "#f5f5f5", /* base06 */
+  "#be643c", /* base0F */
+  "#ffffff", /* base07 */
 };
 
 unsigned int defaultfg = 7;

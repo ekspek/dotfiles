@@ -6,7 +6,9 @@
 "- - - - - - - - - - "
 " Preloaded settings "
 "- - - - - - - - - - "
-source ~/.vim/compat.vim
+if filereadable("/root/.vim/compat.vim")
+	source ~/.vim/compat.vim
+endif
 
 "- - - - - - - - - - - - "
 " Standard Vim settings  "
@@ -68,9 +70,13 @@ set splitright
 "- - - - - "
 " Mappings "
 "- - - - - "
-source ~/.vim/mappings.vim
+if filereadable("/root/.vim/mappings.vim")
+	source ~/.vim/mappings.vim
+endif
 
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
-source ~/.vim/plugins.vim
+if filereadable("/root/.vim/plugins.vim")
+	source ~/.vim/plugins.vim
+endif
