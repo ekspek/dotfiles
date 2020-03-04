@@ -110,12 +110,21 @@ function! WrapToggle()
 	endif
 endfunction
 
+" Toggle all functions at once
+function! ToggleAll()
+	call HiddenCharToggle()
+	call CursorWhereToggle()
+	call ColorColumnToggle()
+	call FoldColumnToggle()
+endfunction
+
 nnoremap <leader>mz :call HiddenCharToggle()<cr>
 nnoremap <leader>mx :call CursorWhereToggle()<cr>
 nnoremap <leader>mc :call ColorColumnToggle()<cr>
 nnoremap <leader>mf :call FoldColumnToggle()<cr>
 nnoremap <leader>mw :call WrapToggle()<cr>
-nnoremap <leader>mb :bd<cr>
+
+nnoremap <leader>ma :call ToggleAll()<cr>
 
 " Toogle search highlighting
 nnoremap <silent><expr> <leader>mh (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"

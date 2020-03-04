@@ -52,8 +52,7 @@ let g:tex_flavor='latex'
 let g:polyglot_disabled = ['latex']
 
 " Set color scheme
-"colorscheme base16-default-dark
-colorscheme base16-monokai
+colorscheme base16-default-dark
 let g:airline_theme='base16'
 
 " Undo tree toggle mapping
@@ -73,7 +72,7 @@ nnoremap <leader>b :Buffers<cr>
 
 " Indent lines guides
 let g:indentLine_enabled = 0
-nnoremap <leader>mi :call IndentLinesToggle()<cr>
+nnoremap <leader>mi :IndentLinesToggle<cr>
 
 " EasyAlign mappings
 xmap ga <Plug>(EasyAlign)
