@@ -1,3 +1,6 @@
+set textwidth=72
+set colorcolumn=50,72
+
 " Toggle colorcolumn
 function! ColorColumnToggle()
 	if &colorcolumn
@@ -6,5 +9,3 @@ function! ColorColumnToggle()
 		setlocal colorcolumn=50,72
 	endif
 endfunction
-
-set colorcolumn=50,72

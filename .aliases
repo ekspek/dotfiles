@@ -6,3 +6,6 @@ alias starwars='telnet towel.blinkenlights.nl'
 # tmux binds
 alias tmux-cmatrix="tmux split-window -h -p 4 \; \
 	send-keys 'cmatrix -a' C-m \;"
+
+# Search and replace using silver searcher
+#ag -l "SearchString" | xargs -I FILE sed -i 's/SearchString/ReplaceString/g' FILE

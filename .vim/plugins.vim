@@ -37,7 +37,9 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('junegunn/vim-easy-align')
 
 	call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
-	let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-clangd']
+	let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-clangd', 'coc-lua']
+
+	"call dein#disable('coc.nvim')
 
 	call dein#end()
 	call dein#save_state()
@@ -52,7 +54,7 @@ let g:tex_flavor='latex'
 let g:polyglot_disabled = ['latex']
 
 " Set color scheme
-colorscheme base16-default-dark
+colorscheme base16-tomorrow
 let g:airline_theme='base16'
 
 " Undo tree toggle mapping
@@ -81,6 +83,6 @@ nmap ga <Plug>(EasyAlign)
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
-if filereadable("/root/.vim/coccfg.vim")
+if filereadable("/root/.vim/coccfg.vim") && dein#is_sourced('coc.nvim')
 	source ~/.vim/coccfg.vim
 endif

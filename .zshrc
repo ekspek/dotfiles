@@ -2,8 +2,12 @@
 ### From here lies code directly related to the terminal and zsh
 ############################################################################
 # Set the terminal style to match suckless
-export TERM=st-256color
+#export TERM=st-256color
 #export TERM=tmux-256color
+export TERM=xterm-256color
+
+# Fix for Windows Powershell
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 # Disable oh-my-zsh custom folder check
 export ZSH_DISABLE_COMPFIX=true
@@ -28,7 +32,7 @@ ZSH_THEME="agnoster"
 COMPLETION_WAITING_DOTS="true"
 
 # Load plugins
-plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting thefuck)
+plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting colored-man-pages thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,7 +42,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-base16_bright
+#base16_bright
+base16_tomorrow
 
 
 ############################################################################

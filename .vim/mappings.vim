@@ -131,3 +131,6 @@ nnoremap <silent><expr> <leader>mh (&hls && v:hlsearch ? ':nohls' : ':set hls').
 
 " Visual mode search and replace
 vnoremap s ""y:%s/<C-r>"/
+
+" Start scratchpad
+command! Scratch :15sp ~/.vim/tmp/scratchpad
