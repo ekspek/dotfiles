@@ -49,7 +49,7 @@ nnoremap <leader>r :reg<cr>
 inoremap jk <esc>
 
 " Map a split of netrw
-nnoremap <F3> :Vexplore<cr>
+nnoremap <F3> :Explore<cr>
 
 " Resize splits
 nnoremap <C-Up> :resize -3<cr>

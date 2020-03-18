@@ -42,8 +42,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-#base16_bright
-base16_tomorrow
+base16_bright
+#base16_tomorrow
 
 
 ############################################################################
@@ -101,7 +101,7 @@ build_prompt() {
 # Remove hostname from zsh theme
 prompt_context() {
 	if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-		#prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" # Comment this line to remove username
+		prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" # Comment this line to remove username
 	fi
 }
 

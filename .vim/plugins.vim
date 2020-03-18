@@ -18,25 +18,27 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 	call dein#add('junegunn/fzf.vim')
+	call dein#add('junegunn/vim-easy-align')
 	call dein#add('vim-airline/vim-airline')
-	call dein#add('lervag/vimtex')
-	call dein#add('tbastos/vim-lua')
 	call dein#add('mbbill/undotree')
 	call dein#add('vim-airline/vim-airline-themes')
 	call dein#add('garbas/vim-snipmate')
 	call dein#add('tomtom/tlib_vim')
 	call dein#add('MarcWeber/vim-addon-mw-utils')
-	call dein#add('tmhedberg/SimpylFold')
 	call dein#add('kshenoy/vim-signature')
-	call dein#add('skywind3000/asyncrun.vim')
 	call dein#add('chriskempson/base16-vim')
 	call dein#add('sheerun/vim-polyglot')
 	call dein#add('thinca/vim-visualstar')
 	call dein#add('preservim/nerdcommenter')
 	call dein#add('Yggdroot/indentLine')
-	call dein#add('junegunn/vim-easy-align')
+	call dein#add('francoiscabrol/ranger.vim')
+	call dein#add('rbgrouleff/bclose.vim')
 
-	call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
+	call dein#add('lervag/vimtex')
+	call dein#add('tbastos/vim-lua')
+	call dein#add('tmhedberg/SimpylFold')
+
+	call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release', 'on_ft': ['python', 'c', 'cpp', 'lua', 'json'], })
 	let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-clangd', 'coc-lua']
 
 	"call dein#disable('coc.nvim')
@@ -54,7 +56,7 @@ let g:tex_flavor='latex'
 let g:polyglot_disabled = ['latex']
 
 " Set color scheme
-colorscheme base16-tomorrow
+colorscheme base16-default-dark
 let g:airline_theme='base16'
 
 " Undo tree toggle mapping

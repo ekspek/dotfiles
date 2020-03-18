@@ -1,6 +1,6 @@
 #!/bin/zsh
 # Alias file
-alias nvf='nvim $(fzf)'
+alias nvf='nvim $(fzf --preview="head -$LINES {}")'
 alias starwars='telnet towel.blinkenlights.nl'
 
 # tmux binds
