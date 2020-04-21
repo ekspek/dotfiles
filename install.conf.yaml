@@ -15,12 +15,13 @@
     ~/.aliases: .aliases
 
 - create:
+    - ~/.config
     - ~/.cache/dein
     - ~/.lsp
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [apt install neovim, Installing neovim]
+  #- [apt install neovim, Installing neovim]
   #- [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"]
   - [sh <(curl -fsSL https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh) ~/.cache/dein, Installing dein]
-  - [nvim -c 'call dein#install() | q', Installing neovim plugins]
+  #- [nvim -c 'call dein#install() | q', Installing neovim plugins]

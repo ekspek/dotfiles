@@ -6,9 +6,7 @@
 "- - - - - - - - - - "
 " Preloaded settings "
 "- - - - - - - - - - "
-if filereadable("/root/.vim/compat.vim")
-	source ~/.vim/compat.vim
-endif
+source ~/.vim/compat.vim
 
 "- - - - - - - - - - - - "
 " Standard Vim settings  "
@@ -17,7 +15,7 @@ endif
 " Set the tab length to four spaces
 set tabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 " Set display numbers
 set number
@@ -70,9 +68,7 @@ set splitright
 "- - - - - "
 " Mappings "
 "- - - - - "
-if filereadable("/root/.vim/mappings.vim")
-	source ~/.vim/mappings.vim
-endif
+source ~/.vim/mappings.vim
 
 "- - - - - - - - - "
 " Plugin settings  "

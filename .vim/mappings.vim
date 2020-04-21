@@ -23,8 +23,9 @@ nnoremap 0 H
 vnoremap 0 H
 onoremap 0 H
 
-" Clone the current line downwards
+" Clone the current line downwards and upwards
 nnoremap <c-j> yyp
+nnoremap <c-k> yyP
 
 " Buffer navigation mappings
 nnoremap <leader>h :bprevious<cr>
@@ -39,23 +40,11 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Run the macro saved in register s (space)
 nnoremap <space> @s
 
-" Show stored marks
-nnoremap <leader>mm :marks<cr>
-
-" Show registers
-nnoremap <leader>r :reg<cr>
-
 " Escape key alternative
 inoremap jk <esc>
 
 " Map a split of netrw
 nnoremap <F3> :Explore<cr>
-
-" Resize splits
-nnoremap <C-Up> :resize -3<cr>
-nnoremap <C-Down> :resize +3<cr>
-nnoremap <C-Left> :vertical resize -3<cr>
-nnoremap <C-Right> :vertical resize +3<cr>
 
 " ¯\_(ツ)_/¯
 iabbrev shrug ¯\_(ツ)_/¯
@@ -65,57 +54,57 @@ nnoremap <leader>& :set noscb<cr>:vsp<cr><c-w>l<c-f>:set scb<cr><c-w>h:set scb<c
 
 " Toggle 76-char column line
 function! ColorColumnToggle()
-	if &colorcolumn
-		setlocal colorcolumn=0
-	else
-		setlocal colorcolumn=76
-	endif
+    if &colorcolumn
+        setlocal colorcolumn=0
+    else
+        setlocal colorcolumn=80
+    endif
 endfunction
 
 " Toggle fold column
 function! FoldColumnToggle()
-	if &foldcolumn
-		setlocal foldcolumn=0
-	else
-		setlocal foldcolumn=4
-	endif
+    if &foldcolumn
+        setlocal foldcolumn=0
+    else
+        setlocal foldcolumn=4
+    endif
 endfunction
 
 " Toggle cursor line and column
 function! CursorWhereToggle()
-	if &cursorline
-		setlocal nocursorline
-		setlocal nocursorcolumn
-	else
-		setlocal cursorline
-		setlocal cursorcolumn
-	endif
+    if &cursorline
+        setlocal nocursorline
+        setlocal nocursorcolumn
+    else
+        setlocal cursorline
+        setlocal cursorcolumn
+    endif
 endfunction
 
 " Toggle showing hidden characters
 function! HiddenCharToggle()
-	if &list
-		setlocal nolist
-	else
-		setlocal list
-	endif
+    if &list
+        setlocal nolist
+    else
+        setlocal list
+    endif
 endfunction
 
 " Toggle wrapping
 function! WrapToggle()
-	if &wrap
-		setlocal nowrap
-	else
-		setlocal wrap
-	endif
+    if &wrap
+        setlocal nowrap
+    else
+        setlocal wrap
+    endif
 endfunction
 
 " Toggle all functions at once
 function! ToggleAll()
-	call HiddenCharToggle()
-	call CursorWhereToggle()
-	call ColorColumnToggle()
-	call FoldColumnToggle()
+    call HiddenCharToggle()
+    call CursorWhereToggle()
+    call ColorColumnToggle()
+    call FoldColumnToggle()
 endfunction
 
 nnoremap <leader>mz :call HiddenCharToggle()<cr>
@@ -133,4 +122,20 @@ nnoremap <silent><expr> <leader>mh (&hls && v:hlsearch ? ':nohls' : ':set hls').
 vnoremap s ""y:%s/<C-r>"/
 
 " Start scratchpad
-command! Scratch :15sp ~/.vim/tmp/scratchpad
+"command! Scratch :15sp ~/.vim/tmp/scratchpad
+
+function! ScratchBuffer()
+    noswapfile hide enew
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
+    setlocal noswapfile
+    file scratch
+endfunction
+
+nnoremap <F6> :call ScratchBuffer()<cr>
+
+" Toggle paste mode
+set pastetoggle=<F4>
+
+" Call make on the current folder
+nnoremap <buffer> <F5> :make<cr>

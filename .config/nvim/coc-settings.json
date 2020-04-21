@@ -2,6 +2,9 @@
 	"suggest.autoTrigger": "always",
 	"diagnostic.enable": false,
 	"python.jediEnabled": false,
+	"python.linting.pylintEnabled": true,
+	"python.linting.pylintUseMinimalCheckers": true,
 	"python.linting.enabled": true,
-	"python.linting.lintOnSave": true
+	"python.linting.lintOnSave": true,
+	"python.pythonPath": "/usr/bin/python3"
 }
