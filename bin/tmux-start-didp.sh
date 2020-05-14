@@ -11,8 +11,8 @@ tmux split-window -h -t "$SESSION:DCApp.1"
 tmux split-window -v -p 15 -t "$SESSION:DCApp.2"
 tmux split-window -h -l 35 -t "$SESSION:DCApp.3"
 
-tmux send-keys -t "$SESSION:DCApp.1" "nvim DCApp.py" Enter
-tmux send-keys -t "$SESSION:DCApp.2" "nvim DCApp/netif.py" Enter
+tmux send-keys -t "$SESSION:DCApp.1" "opendcapp" Enter
+#tmux send-keys -t "$SESSION:DCApp.2" "opendcapp" Enter
 #tmux send-keys -t "$SESSION:DCApp.3" "gui" Enter
 tmux clock-mode -t "$SESSION:DCApp.4"
 

@@ -44,7 +44,7 @@ nnoremap <space> @s
 inoremap jk <esc>
 
 " Map a split of netrw
-nnoremap <F3> :Explore<cr>
+nnoremap <F2> :Explore<cr>
 
 " ¯\_(ツ)_/¯
 iabbrev shrug ¯\_(ツ)_/¯
@@ -132,10 +132,10 @@ function! ScratchBuffer()
     file scratch
 endfunction
 
-nnoremap <F6> :call ScratchBuffer()<cr>
+nnoremap <F4> :call ScratchBuffer()<cr>
 
 " Toggle paste mode
-set pastetoggle=<F4>
+set pastetoggle=<F3>
 
 " Call make on the current folder
-nnoremap <buffer> <F5> :make<cr>
+nnoremap <buffer> <F5> :make!<cr>

@@ -3,6 +3,9 @@
 alias nvf='nvim $(fzf --preview="head -$LINES {}")'
 alias starwars='telnet towel.blinkenlights.nl'
 
+# cd but with ranger (cd's when exiting ranger)
+alias cdr='source ranger'
+
 # tmux binds
 alias tmux-cmatrix="tmux split-window -h -p 4 \; \
 	send-keys 'cmatrix -a' C-m \;"

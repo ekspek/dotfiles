@@ -34,13 +34,17 @@ if dein#load_state('~/.cache/dein')
     call dein#add('francoiscabrol/ranger.vim')
     call dein#add('rbgrouleff/bclose.vim')
     call dein#add('morhetz/gruvbox')
+    call dein#add('triglav/vim-visual-increment')
 
     call dein#add('lervag/vimtex')
     call dein#add('tbastos/vim-lua')
     call dein#add('tmhedberg/SimpylFold')
 
-    call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release', 'on_ft': ['python', 'c', 'cpp', 'lua', 'json'], })
-    let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-clangd', 'coc-lua']
+    call dein#add('ludovicchabant/vim-gutentags', { 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex'], })
+    call dein#add('majutsushi/tagbar', { 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex'], })
+
+    call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release', 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex', 'json'], })
+    let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-clangd']
 
     "call dein#disable('coc.nvim')
 
@@ -62,7 +66,7 @@ colorscheme gruvbox
 let g:airline_theme='base16'
 
 " Undo tree toggle mapping
-nnoremap <F2> :UndotreeToggle<cr>
+nnoremap <F6> :UndotreeToggle<cr>
 
 " Enable powerline fonts
 let g:airline_powerline_fonts = 1
@@ -80,6 +84,9 @@ nnoremap <leader>mi :IndentLinesToggle<cr>
 " EasyAlign mappings
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" Tagbar toggle
+nnoremap <F7> :TagbarToggle<cr>
 
 "- - - - - - - - - "
 " Plugin settings  "
