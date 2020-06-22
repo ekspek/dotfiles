@@ -22,7 +22,7 @@ export DOTFILES=$HOME/dotfiles
 export ZSH_CUSTOM=$DOTFILES/.oh-my-zsh/custom
 
 # Set name of the theme to load
-ZSH_THEME="agnoster"
+ZSH_THEME="jnrowe"
 
 # Set the random candidates (if ZSH_THEME is set to "random")
 # Used as a storage for themes that I like
@@ -32,7 +32,7 @@ ZSH_THEME="agnoster"
 COMPLETION_WAITING_DOTS="true"
 
 # Load plugins
-plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting colored-man-pages thefuck)
+plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting colored-man-pages thefuck svn-fast-info)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -26,7 +26,6 @@ if dein#load_state('~/.cache/dein')
     call dein#add('tomtom/tlib_vim')
     call dein#add('MarcWeber/vim-addon-mw-utils')
     call dein#add('kshenoy/vim-signature')
-    call dein#add('chriskempson/base16-vim')
     call dein#add('sheerun/vim-polyglot')
     call dein#add('thinca/vim-visualstar')
     call dein#add('preservim/nerdcommenter')
@@ -35,13 +34,14 @@ if dein#load_state('~/.cache/dein')
     call dein#add('rbgrouleff/bclose.vim')
     call dein#add('morhetz/gruvbox')
     call dein#add('triglav/vim-visual-increment')
+    call dein#add('tpope/vim-fugitive')
 
     call dein#add('lervag/vimtex')
     call dein#add('tbastos/vim-lua')
     call dein#add('tmhedberg/SimpylFold')
 
-    call dein#add('ludovicchabant/vim-gutentags', { 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex'], })
-    call dein#add('majutsushi/tagbar', { 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex'], })
+    "call dein#add('ludovicchabant/vim-gutentags', { 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex'], })
+    "call dein#add('majutsushi/tagbar', { 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex'], })
 
     call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release', 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex', 'json'], })
     let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-clangd']
@@ -76,6 +76,10 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 " Enable fzf
 set rtp+=~/.fzf
+nnoremap <leader>F :Files!<cr>
+nnoremap <leader>B :Buffers<cr>
+nnoremap <leader>L :BLines<cr>
+nnoremap <leader>A :Ag!<cr>
 
 " Indent lines guides
 let g:indentLine_enabled = 0
@@ -86,7 +90,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Tagbar toggle
-nnoremap <F7> :TagbarToggle<cr>
+"nnoremap <F7> :TagbarToggle<cr>
 
 "- - - - - - - - - "
 " Plugin settings  "
