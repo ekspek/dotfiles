@@ -32,7 +32,7 @@ ZSH_THEME="jnrowe"
 COMPLETION_WAITING_DOTS="true"
 
 # Load plugins
-plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting colored-man-pages thefuck svn-fast-info)
+plugins=(git svn gitignore zsh-autosuggestions zsh-syntax-highlighting colored-man-pages svn-fast-info)
 
 source $ZSH/oh-my-zsh.sh
 

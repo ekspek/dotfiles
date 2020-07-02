@@ -73,6 +73,6 @@ source ~/.vim/mappings.vim
 "- - - - - - - - - "
 " Plugin settings  "
 "- - - - - - - - - "
-if filereadable("/root/.vim/plugins.vim")
+if filereadable("/home/daniel/.vim/plugins.vim")
 	source ~/.vim/plugins.vim
 endif
