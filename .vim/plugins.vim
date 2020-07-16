@@ -44,7 +44,7 @@ if dein#load_state('~/.cache/dein')
     "call dein#add('majutsushi/tagbar', { 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex'], })
 
     call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release', 'on_ft': ['python', 'c', 'cpp', 'lua', 'tex', 'json'], })
-    let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-clangd']
+    let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-clangd', 'coc-tabnine']
 
     "call dein#disable('coc.nvim')
 

@@ -1,6 +1,6 @@
 #!/bin/zsh
 # Alias file
-alias nvf='nvim $(fzf --preview="head -$LINES {}")'
+alias nvf='nvim -c "Files!"'
 alias starwars='telnet towel.blinkenlights.nl'
 
 # cd but with ranger (cd's when exiting ranger)
