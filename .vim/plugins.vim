@@ -78,7 +78,7 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 set rtp+=~/.fzf
 nnoremap <leader>F :Files!<cr>
 nnoremap <leader>B :Buffers<cr>
-nnoremap <leader>L :BLines<cr>
+nnoremap <leader>L :BLines!<cr>
 nnoremap <leader>A :Ag!<cr>
 
 " Indent lines guides
