@@ -10,6 +10,8 @@ endif
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
+let g:polyglot_disabled = ['latex']
+
 if dein#load_state('~/.cache/dein')
     " Adding a plugin needs to be followed by :call dein#install()
     " Removing a plugin needs to be followed by :call dein#check_clean() and :call dein#recache_runtimepath()
@@ -58,7 +60,6 @@ syntax enable
 
 " Default tex filetype
 let g:tex_flavor='latex'
-let g:polyglot_disabled = ['latex']
 
 " Set color scheme
 "colorscheme base16-default-dark
